@@ -1,0 +1,18 @@
+# ignore databases
+*.db
+
+# ignore compiled files
+*.pyc
+
+# ignore local files
+local
+local.py
+
+# ignore virtual environment
+env
+
+# ignore changing media
+media
+
+# ignore IDE config
+.idea
