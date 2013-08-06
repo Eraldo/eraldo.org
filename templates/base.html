@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!--
+01000101 01110010 01100001 01101100 01100100 01101111
+
+8888888888                 888      888
+888                        888      888             Very nice.. so you do read code. :D
+888                        888      888
+8888888    888d888 8888b.  888  .d88888  .d88b.     Like my site? => contact me
+888        888P"      "88b 888 d88" 888 d88""88b    Hate my site? => contact me
+888        888    .d888888 888 888  888 888  888
+888        888    888  888 888 Y88b 888 Y88..88P    Not sure yet? => keep looking :P
+8888888888 888    "Y888888 888  "Y88888  "Y88P"
+
+01000101 01110010 01100001 01101100 01100100 01101111
+-->
+
+<head>
+    <title>Eraldo &mdash; {% block title %}Base{% endblock %}</title>
+
+    <meta content="Want to get in touch with or inform yourself about Eraldo Helal? You&#x27;re in the right place."
+          name="description"/>
+    <meta content="Eraldo" property="og:title"/>
+    <meta content="Eraldo" property="og:site_name"/>
+    <meta content="website" property="og:type"/>
+    <meta content="http://www.eraldo.org/" property="og:url"/>
+    <meta content="http://eraldo.org/eraldo/static/logo.png" property="og:image"/>
+    <meta content="Want to get in touch with or inform yourself about Eraldo Helal? You&#x27;re in the right place."
+          property="og:description"/>
+    <meta content='http://eraldo.org/eraldo/static/logo.png' itemprop='image'>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+
+    <meta content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+
+    <link href='/favicon.ico' rel='shortcut icon'>
+
+    <link href="//eraldo.org/eraldo/static/style.css" media="all" rel="stylesheet"
+          type="text/css"/>
+    <script src="//eraldo.org/eraldo/static/script.js"
+            type="text/javascript"></script>
+
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

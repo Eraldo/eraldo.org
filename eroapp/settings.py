@@ -128,7 +128,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+
+    # main apps
     'users',
+    'pages',
 
     # helper apps
     'south', # data migration
