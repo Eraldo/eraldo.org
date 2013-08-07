@@ -6,39 +6,67 @@
 
 {% block extrahead %}
     <style>
-        .navbar.affix-top {
-            padding: 20px;
+        body {
+            background-color: black;
         }
+
+        .navbar a {
+            transition: padding 500ms ease-out;
+        }
+
+        .navbar li a {
+            border-top: 4px solid transparent;
+        }
+
+        .navbar li a:hover {
+            color: #357ebd !important;
+        }
+
+        .navbar li.active a {
+            border-top: 4px solid #357ebd;
+            color: #357ebd !important;
+        }
+
+        #content {
+            background-color: orange;
+            padding: 10px;
+            margin-top: 110px;
+        }
+
+        .navbar.affix-top {
+        {#            padding: 20px;#}
+        }
+
+        .navbar.affix-top a {
+            padding: 40px 15px;
+        }
+
         .navbar.affix {
-            position: fixed;
-{#            padding: 40px;#}
-            top: 0;
-            width: 100%
+        {#            padding: 0px;#}
         }
     </style>
 {% endblock %}
 
 {% block content %}
 
-    asfasfasdf
-
-    <div  style="width: 100%;">
-        <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
+        <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="10">
             <div class="container">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Eraldo</a>
+                <a class="navbar-brand" href="#">eraldo</a>
+
 
                 <div class="nav-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active"><a href="#">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#about"><img src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg" height="60px"></a></li>
+                        <li><a href="#contact">contact</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown <b
                                     class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
@@ -60,10 +88,9 @@
                 <!--/.nav-collapse -->
             </div>
         </div>
-    </div>
 
 
-    <div class="container">
+    <div id="content" class="container">
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
