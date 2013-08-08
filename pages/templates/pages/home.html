@@ -7,236 +7,334 @@
 {% block extrahead %}
     <style>
         body {
-            background-color: black;
+            background-color: #222;
+            background-image: url("http://zindustry.com/images/contact-bg.jpg");
         }
 
-        .navbar a {
-            transition: padding 500ms ease-out;
+        #main-menu {
+            background-image: url("http://zindustry.com/images/contact-bg.jpg");
         }
 
-        .navbar li a {
+        #main-menu img {
+            transition: width 1s ease;
+            -webkit-transition: width 1s ease, height 1s ease;
+        }
+
+        #main-menu .menu-link > a, #main-menu a.menu-btn {
+            transition: padding 1s ease;
+            -webkit-transition: padding 1s ease, height 1s ease;
+        }
+
+        #main-menu .menu-link > a {
+            height: 140px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             border-top: 4px solid transparent;
         }
 
-        .navbar li a:hover {
-            color: #357ebd !important;
+        #main-menu.affix .menu-link > a {
+            height: 60px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
 
-        .navbar li.active a {
+        #main-menu.affix-top .menu-link > a {
+            height: 140px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #main-menu .menu-btn {
+            width: 45px;
+            height: 30px;
+            background-image: url("http://www.infinum.co/assets/menu/nav_btn.png");
+            background-size: 45px 30px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 15px;
+            margin: 14px auto;
+        }
+
+        #main-menu .menu-btn {
+            padding-top: 70px;
+        }
+
+        #main-menu.affix-top .menu-btn {
+            padding-top: 70px;
+        }
+
+        #main-menu.affix .menu-btn {
+            padding-top: 15px;
+        }
+
+        {##}
+        #main-menu a:hover {
+        {#            color: #357ebd !important;#}
+        }
+
+        {##}
+        #main-menu .active > a {
             border-top: 4px solid #357ebd;
             color: #357ebd !important;
+            background-color: transparent;
         }
 
+        {##}
         #content {
-            background-color: orange;
-            padding: 10px;
-            margin-top: 110px;
+{#            background-color: orange;#}
+            background-image: url("http://zindustry.com/images/disciplines-bg.jpg");
+{#            padding: 10px;#}
+            padding-top: 150px;
+        {#            margin-top: 0px;#}
         }
 
-        .navbar.affix-top {
-        {#            padding: 20px;#}
+        #main-menu .logo-img img {
+            width: 120px;
         }
 
-        .navbar.affix-top a {
-            padding: 40px 15px;
+        #main-menu.affix-top .logo-img img {
+            width: 120px;
         }
 
-        .navbar.affix {
-        {#            padding: 0px;#}
+        #main-menu.affix .logo-img img {
+            width: 60px;
+        }
+
+        #main-menu.affix .logo-text a {
+            display: none;
+        }
+
+        #main-menu .menu-bar {
+            padding: 0;
+        }
+
+        #main-menu .menu-bar-left {
+            padding-left: 15px;
+        }
+
+        @media screen and (min-width: 768px) {
+            #main-menu .menu-bar-left ul {
+                float: right;
+            }
+        }
+
+        #main-menu .menu-bar-right {
+            padding-right: 15px;
+        }
+
+        #main-menu li.menu-link {
+            min-width: 110px;
+        }
+
+        #main-menu .dongle {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            margin-bottom: -32px;
+            width: 177px;
+            height: 32px;
+            background-image: url("http://www.infinum.co/assets/menu/section_black_end.png");
+            background-size: 177px 32px;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
     </style>
 {% endblock %}
 
 {% block content %}
 
-        <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="10">
-            <div class="container">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">eraldo</a>
+    <div id="carousel-main" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-main" data-slide-to="1"></li>
+            <li data-target="#carousel-main" data-slide-to="2"></li>
+            <li data-target="#carousel-main" data-slide-to="3"></li>
+        </ol>
 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://webdesigntutsplus.s3.amazonaws.com/tuts/342_bootstrap_carousel/Carousel-Files-COMPLETE/img/echo.jpg" alt="universe" style="width: 100%;">
 
-                <div class="nav-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#about"><img src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg" height="60px"></a></li>
-                        <li><a href="#contact">contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown <b
-                                    class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="nav-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form form-inline pull-right">
-                        <input type="text" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" class="btn">Sign in</button>
-                    </form>
+                <div class="carousel-caption">
+                    Universe
                 </div>
-                <!--/.nav-collapse -->
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1200x480" alt="placeholder" style="width: 100%;">
+
+                <div class="carousel-caption">
+                    Salsa Dance Instructor
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1200x480" alt="placeholder" style="width: 100%;">
+
+                <div class="carousel-caption">
+                    Personal Development Coach
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1200x480" alt="placeholder" style="width: 100%;">
+
+                <div class="carousel-caption">
+                    Web Developer
+                </div>
             </div>
         </div>
 
-
-    <div id="content" class="container">
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <h1>Hello, world!</h1>
-
-            <p>This is a template for a simple marketing or informational website. It includes a large callout
-                called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                something more unique.</p>
-
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-        </div>
-
-        <div class="body-content">
-
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
-                        id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
-                        id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
-                        id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Heading</h2>
-
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
-                        id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-
-
-            <hr>
-
-            <footer>
-                <p>&copy; Company 2013</p>
-            </footer>
-        </div>
-
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-main" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-main" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
     </div>
-    <!-- /container -->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Hello, world!</h1>
+
+        <p>This is a template for a simple marketing or informational website. It includes a large callout
+            called the hero unit and three supporting pieces of content. Use it as a starting point to create
+            something more unique.</p>
+
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="body-content" style="padding: 0 60px;">
+
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
+                    id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
+                    id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
+                    id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+                    malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
+                    id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <footer>
+            <p>&copy; Company 2013</p>
+        </footer>
+    </div>
 {% endblock %}
