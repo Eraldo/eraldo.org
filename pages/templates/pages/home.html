@@ -11,7 +11,7 @@
             background-image: url("http://zindustry.com/images/contact-bg.jpg");
         }
 
-        #main-menu {
+        #main-menu, #footer {
             background-image: url("http://zindustry.com/images/contact-bg.jpg");
         }
 
@@ -126,7 +126,7 @@
             min-width: 110px;
         }
 
-        #main-menu .dongle {
+        .dongle {
             margin-left: auto;
             margin-right: auto;
             position: relative;
@@ -138,7 +138,20 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
+
+        .dongle.dongle-bottom {
+            -webkit-transform: scaleY(-1);
+            margin-bottom: 0;
+            margin-top: -32px;
+        }
+
+        #footer {
+            text-align: center;
+        }
+
+
     </style>
+
 {% endblock %}
 
 {% block content %}
