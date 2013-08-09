@@ -35,6 +35,7 @@
 
     <link href='/favicon.ico' rel='shortcut icon'>
 
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}pages/css/base.css"/>
     <link href="//eraldo.org/eraldo/static/style.css" media="all" rel="stylesheet"
           type="text/css"/>
     <script src="//eraldo.org/eraldo/static/script.js"
@@ -63,9 +64,9 @@
 
                         <div class="nav-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link active"><a href="#contact">ABOUT</a></li>
+                                <li class="menu-link active"><a href="#contact">about</a></li>
                                 <li class="menu-link dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">TOPICS <b
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">topics <b
                                             class="caret"></b></a>
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Action</a></li>
@@ -87,8 +88,8 @@
                                 <img class="img-circle img-responsive"
                                      src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg">
                             </div>
-                            <div class="logo-text nav-collapse collapse">
-                                <a class="" href="#">ERALDO</a>
+                            <div class="logo-bar nav-collapse collapse">
+                                <a class="logo-text" href="#">eraldo</a>
                             </div>
                         </a>
                     </div>
@@ -99,9 +100,9 @@
 
                         <div class="nav-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link"><a href="#contact">CONTACT</a></li>
+                                <li class="menu-link"><a href="#contact">contact</a></li>
                                 <li class="menu-link dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">ACCOUNT <b
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">account <b
                                             class="caret"></b></a>
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Action</a></li>
@@ -135,10 +136,12 @@
 <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="dongle dongle-bottom"></div>
     <div class="container" style="padding-top: 0px;">
-        <a class="" href="#">ERALDO</a>
-        <p class="text-muted credit">© 2013 CoGame Webdesign.</p>
-{#        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a#}
-{#                href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>#}
+        <div class="logo-bar">
+            <a class="logo-text" href="#">eraldo</a>
+        </div>
+{#        <p class="text-muted credit">© 2013 CoGame Webdesign.</p>#}
+        {#        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a#}
+        {#                href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>#}
     </div>
 </div>
 

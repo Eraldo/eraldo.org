@@ -1,0 +1,172 @@
+        @font-face {
+            font-family: 'eroapp';
+            src: url('PFBeauSansPro-Reg.ttf');
+            src: local('☺'), url('../fonts/PFBeauSansPro-Reg.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'eroapp-thin';
+            src: url('PFBeauSansPro-Thin.ttf');
+            src: local('☺'), url('../fonts/PFBeauSansPro-Thin.ttf') format('truetype');
+        }
+
+
+        body {
+            background: #222 url("http://zindustry.com/images/contact-bg.jpg");
+            font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        #main-menu, #footer {
+            background-image: url("http://zindustry.com/images/contact-bg.jpg");
+        }
+
+        #main-menu img {
+            transition: width 1s ease;
+            -webkit-transition: width 1s ease, height 1s ease;
+        }
+
+        #main-menu .menu-link > a, #main-menu a.menu-btn {
+            transition: padding 1s ease;
+            -webkit-transition: padding 1s ease, height 1s ease;
+        }
+
+        #main-menu .menu-link > a {
+            /*font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+            font-size: 16px;
+            text-transform: uppercase;
+            height: 120px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-top: 4px solid transparent;
+        }
+
+        #main-menu.affix .menu-link > a {
+            height: 60px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #main-menu.affix-top .menu-link > a {
+            height: 120px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #main-menu .menu-btn {
+            width: 45px;
+            height: 30px;
+            background-size: 45px 30px;
+            background: url("http://www.infinum.co/assets/menu/nav_btn.png") no-repeat center center;
+            padding: 15px;
+            margin: 14px auto;
+        }
+
+        #main-menu .menu-btn {
+            padding-top: 70px;
+        }
+
+        #main-menu.affix-top .menu-btn {
+            padding-top: 70px;
+        }
+
+        #main-menu.affix .menu-btn {
+            padding-top: 15px;
+        }
+
+
+        #main-menu a:hover {
+        color: #357ebd !important;
+        }
+
+        #main-menu .active > a {
+            border-top: 4px solid #357ebd;
+            color: #357ebd !important;
+            background-color: transparent;
+        }
+
+        #content {
+        /*background-color: orange; */
+        background-image: url("http://zindustry.com/images/disciplines-bg.jpg");
+        /*padding: 10px; */
+        padding-top: 150px;
+        /*margin-top: 0px;*/
+        }
+
+        #main-menu .logo-img img {
+            width: 120px;
+        }
+
+        #main-menu.affix-top .logo-img img {
+            width: 120px;
+        }
+
+        #main-menu.affix .logo-img img {
+            width: 60px;
+        }
+
+        #main-menu.affix .logo-text {
+            display: none;
+        }
+
+        #main-menu .menu-bar {
+            padding: 0;
+        }
+
+        #main-menu .menu-bar-left {
+            padding-left: 15px;
+        }
+
+        @media screen and (min-width: 768px) {
+            #main-menu .menu-bar-left ul {
+                float: right;
+            }
+        }
+
+        #main-menu .menu-bar-right {
+            padding-right: 15px;
+        }
+
+        #main-menu li.menu-link {
+            min-width: 110px;
+        }
+
+        .dongle {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            margin-bottom: -32px;
+            width: 177px;
+            height: 32px;
+            background-size: 177px 32px;
+            background: url("http://www.infinum.co/assets/menu/section_black_end.png") no-repeat center center;
+        }
+
+        .dongle.dongle-bottom {
+            -webkit-transform: scaleY(-1);
+            margin-bottom: 0;
+            margin-top: -32px;
+        }
+
+        .logo-text {
+            font-family: 'eroapp-thin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            text-decoration: none !important;
+        }
+        #main-menu .logo-bar {
+            /*background-color: red;*/
+            /*line-height: 0;*/
+            /*margin-top: 20px;*/
+            /*z-index: 100;*/
+            /*padding-top: 0px;*/
+            /*position: absolute;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*display: inline;*/
+            /*margin-top: 16px !important;*/
+        }
+        #footer .logo-text {
+            font-size: 32px;
+        }
+
+        #footer {
+            text-align: center;
+        }
