@@ -12,7 +12,7 @@
 
         body {
             background: #222 url("http://zindustry.com/images/contact-bg.jpg");
-            font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
         }
 
         #main-menu, #footer {
