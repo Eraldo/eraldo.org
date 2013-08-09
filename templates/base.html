@@ -88,7 +88,7 @@
                                 <img class="img-circle img-responsive"
                                      src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg">
                             </div>
-                            <div class="logo-bar nav-collapse collapse">
+                            <div class="logo-bar">
                                 <a class="logo-text" href="#">eraldo</a>
                             </div>
                         </a>
@@ -136,12 +136,17 @@
 <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="dongle dongle-bottom"></div>
     <div class="container" style="padding-top: 0px;">
-        <div class="logo-bar">
+        <div class="footer-bar footer-bar-left col-3 col-sm-4">
+            <p class="text-muted credit hidden-sm">© 2013 CoGame Webdesign</p>
+            <p class="text-muted credit visible-sm">©</p>
+        </div>
+        <div class="footer-bar footer-bar-middle logo-bar col-6 col-sm-4">
             <a class="logo-text" href="#">eraldo</a>
         </div>
-{#        <p class="text-muted credit">© 2013 CoGame Webdesign.</p>#}
-        {#        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a#}
-        {#                href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>#}
+        <div class="footer-bar footer-bar-right col-3 col-sm-4">
+            <p class="text-muted credit hidden-sm">✉ Contact Eraldo Helal</p>
+            <p class="text-muted credit visible-sm">✉</p>
+        </div>
     </div>
 </div>
 
@@ -157,6 +162,8 @@
 {# bootstrap #}
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+
+{% block extra-script %}{% endblock %}
 
 </body>
 </html>
