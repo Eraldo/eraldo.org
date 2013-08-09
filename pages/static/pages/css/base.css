@@ -30,7 +30,6 @@ body {
 }
 
 #main-menu .menu-link > a {
-    /*font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-size: 16px;
     text-transform: uppercase;
     height: 120px;
@@ -59,15 +58,6 @@ body {
     padding: 15px;
     margin: 14px auto;
 }
-
-/*#main-menu .menu-btn {*/
-/*width: 45px;*/
-/*height: 30px;*/
-/*background-size: 45px 30px;*/
-/*background: url("http://themes.alessioatzeni.com/html/chakra/dark/_include/img/menu-mobile.png") no-repeat center center;*/
-/*padding: 15px;*/
-/*margin: 14px auto;*/
-/*}*/
 
 #main-menu .menu-bar .menu-btn {
     -webkit-transition: all ease-in .4s;
@@ -174,15 +164,8 @@ body {
 }
 
 #main-menu .logo-bar {
-    /*background-color: red;*/
-    /*line-height: 0;*/
-    /*margin-top: 20px;*/
     z-index: 100;
-    /*padding-top: 0px;*/
     position: relative;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*display: inline;*/
     margin-bottom: -16px !important;
 }
 
