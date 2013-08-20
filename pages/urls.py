@@ -7,7 +7,7 @@ __author__ = "Eraldo Helal"
 
 from django.conf.urls import patterns, url
 from django.shortcuts import redirect
-from pages.views import HomeView, TestView, ChatView
+from pages.views import HomeView, TestView, ChatView, ContactView
 
 urlpatterns = patterns('',
     # ex: ../
@@ -18,7 +18,11 @@ urlpatterns = patterns('',
     url(r'^home/$',
         HomeView.as_view(),
         name='home'),
-    # ex: ../test/
+    # ex: ../contact/
+    url(r'^contact/$',
+        ContactView.as_view(),
+        name='contact'),
+    # ex: ../chat/
     url(r'^chat/$',
         ChatView.as_view(),
         name='chat'),

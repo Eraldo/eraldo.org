@@ -156,7 +156,10 @@ body .content {
 }
 
 #main-menu li.menu-link {
-    min-width: 110px;
+    min-width: 100px;
+}
+#main-menu li.menu-link.icon-link {
+    /*min-width: 20px;*/
 }
 
 #main-menu .call-bar > a {

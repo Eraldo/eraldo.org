@@ -79,7 +79,8 @@
 
                         <div class="nav-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link active"><a href="#contact">about</a></li>
+{#                                <li class="menu-link icon-link"><a href="{% url 'pages:home' %}">home</a></li>#}
+                                <li class="menu-link active"><a href="{% url 'pages:home' %}">about</a></li>
                                 <li class="menu-link dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">topics <b
                                             class="caret"></b></a>
@@ -97,11 +98,13 @@
                     <div class="menu-bar menu-bar-center col-4">
                         <a href="#about">
                             <div class="logo-img">
+                                <a href="{% url 'pages:home' %}">
                                 <img class="img-circle img-responsive"
                                      src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg">
+                                    </a>
                             </div>
                             <div class="logo-bar">
-                                <a class="logo-text" href="#" title="Home">eraldo</a>
+                                <a class="logo-text" href="{% url 'pages:home' %}" title="Home">eraldo</a>
                             </div>
                             <div class="call-bar nav-collapse collapse">
                                 <a class="btn btn-lg call-btn visible-sm" href="tel:+4369910203039"
@@ -116,21 +119,8 @@
 
                         <div class="nav-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link"><a href="#contact">blog</a></li>
-                                <li class="menu-link"><a href="#contact">contact</a></li>
-                                {#                                <li class="menu-link dropdown">#}
-                                {#                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">account <b#}
-                                {#                                            class="caret"></b></a>#}
-                                {#                                    <ul class="dropdown-menu pull-right">#}
-                                {#                                        <li><a href="#">Action</a></li>#}
-                                {#                                        <li><a href="#">Another action</a></li>#}
-                                {#                                        <li><a href="#">Something else here</a></li>#}
-                                {#                                        <li class="divider"></li>#}
-                                {#                                        <li class="nav-header">Nav header</li>#}
-                                {#                                        <li><a href="#">Separated link</a></li>#}
-                                {#                                        <li><a href="#">One more separated link</a></li>#}
-                                {#                                    </ul>#}
-                                {#                                </li>#}
+                                <li class="menu-link"><a href="#blog">blog</a></li>
+                                <li class="menu-link"><a href="{% url 'pages:contact' %}">contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -160,15 +150,15 @@
         </div>
         <div class="footer-bar footer-bar-middle logo-bar col-6 col-sm-4">
             <div class="social-bar">
-                <a class="social social-facebook" href="https://www.facebook.com/Eraldo"></a>
-                <a class="social social-google" href="https://plus.google.com/u/0/102746258450496109858"></a>
+                <a class="social social-facebook" href="https://www.facebook.com/Eraldo" target="_blank"></a>
+                <a class="social social-google" href="https://plus.google.com/u/0/102746258450496109858" target="_blank"></a>
             </div>
             <div class="logo-text-bar">
                 <a class="logo-text" href="#">eraldo</a>
             </div>
         </div>
         <div class="footer-bar footer-bar-right col-3 col-sm-4">
-            <a href="#" class="text-muted credit hidden-sm">✉ Contact Eraldo Helal</a>
+            <a href="{% url 'pages:contact' %}" class="text-muted credit hidden-sm">✉ Contact Eraldo Helal</a>
             <a href="#" class="text-muted credit visible-sm">✉</a>
         </div>
     </div>
