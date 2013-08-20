@@ -112,15 +112,9 @@ body .content {
 }
 
 #content {
-    background-color: #f4f4f4;
-    /*background-image: url("http://zindustry.com/images/disciplines-bg.jpg");*/
-    /*margin-left: -100px;*/
-    /*padding: 10px; */
-    padding-top: 140px;
-    /*padding-left: 80px;*/
-    /*padding-right: 80px;*/
-    /*margin-left: -80px;*/
-    /*margin-top: 0px;*/
+    background-color: white;
+    padding-top: 120px;
+    padding-bottom: 50px;
 }
 
 #main-menu .logo-img img {
@@ -210,41 +204,13 @@ body .content {
     text-align: center;
 }
 
-#footer .logo-text-bar {
-    height: 10px;
-    /*padding: 0;*/
-}
-
-#footer .logo-text {
-    font-size: 32px;
-}
-
-#footer {
-    text-align: center;
-}
-
-#footer .footer-bar-left, #footer .footer-bar-right {
-    padding-top: 20px;
-}
-
-#footer .footer-bar-middle {
-    /*padding-top: 8px;*/
-}
-
-#footer .footer-bar-left {
-    text-align: right;
-}
-
-#footer .footer-bar-right {
-    text-align: left;
-}
 
 #carousel-main {
     margin-bottom: 20px;
 }
 
 #carousel-main .carousel-mask {
-    background: url("../images/slideshow/mask.png") center center no-repeat;
+    background: url("../images/slideshow/mask_lightgray.png") center center no-repeat;
     /*background-size: cover;*/
     position: absolute;
     top: 0;
@@ -257,21 +223,24 @@ body .content {
 }
 
 #carousel-main .carousel-caption {
-    padding-bottom: 5px;
+    padding-bottom: 0;
+    bottom: 0px;
     /*background-color: #357ebd;*/
     /*width: auto;*/
     /*opacity: .5;*/
 }
+
 #carousel-main .carousel-caption a {
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 #carousel-main .carousel-caption a:hover {
     background-color: rgba(53, 126, 189, 1);
 }
 
 #carousel-main .carousel-indicators {
     /*background-color: #222;*/
-    bottom: 0;
+    bottom: -40px;
     margin-bottom: 0;
     height: 20px;
 }
@@ -314,12 +283,15 @@ body .content {
     #carousel-main .carousel-control .icon-next:before {
         content: '';
     }
+
     #carousel-main .carousel-control .icon-prev {
         background: url("../images/slideshow/left_icon.png") center center no-repeat;
     }
+
     #carousel-main .carousel-control .icon-next {
         background: url("../images/slideshow/right_icon.png") center center no-repeat;
     }
+
     #carousel-main .carousel-control .icon-prev,
     #carousel-main .carousel-control .icon-next {
         width: 50px;
@@ -333,6 +305,31 @@ body .content {
 #carousel-main .carousel-control:hover .icon-prev,
 #carousel-main .carousel-control:hover .icon-next {
     background-color: #357ebd;
+}
+
+#footer .logo-text-bar {
+    height: 10px;
+    /*padding: 0;*/
+}
+
+#footer .logo-text {
+    font-size: 32px;
+}
+
+#footer {
+    text-align: center;
+}
+#footer .footer-bar-left {
+    text-align: right;
+}
+#footer .footer-bar-right {
+    text-align: left;
+}
+#footer .footer-bar-middle {
+}
+
+#footer .footer-bar-left, #footer .footer-bar-right {
+    padding-top: 20px;
 }
 
 #footer .social-bar {
@@ -373,4 +370,61 @@ body .content {
 #footer a.credit:hover {
     color: #357ebd;
     text-decoration: none;
+}
+
+
+.section {
+    padding: 20px 20px;
+    padding-top: 30px;
+    background-color: white;
+}
+
+.section-stretch {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-end {
+    position: relative;
+    margin: 0 auto;
+    width: 177px;
+    height: 32px;
+    bottom: -32px;
+    margin-top: -32px;
+
+    /* default color */
+    background: transparent url("../images/dongle/dongle_down_white.png");
+}
+
+.section-grey {
+    background-color: gray;
+}
+.section-lightgray {
+    background-color: lightgray;
+}
+
+.section-black {
+    background-color: black;
+}
+
+.section-end-white {
+    background: transparent url("../images/dongle/dongle_down_white.png");
+}
+
+.section-end-grey {
+    background: transparent url("../images/dongle/dongle_down_grey.png");
+}
+.section-end-lightgrey {
+    background: transparent url("../images/dongle/dongle_down_lightgray.png");
+}
+.section-end-f4 {
+    background: transparent url("../images/dongle/dongle_down_f4.png");
+}
+
+.section-end-e {
+    background: transparent url("../images/dongle/dongle_down_e.png");
+}
+
+.section-end-black {
+    background: transparent url("../images/dongle/dongle_down_black.png");
 }

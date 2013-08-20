@@ -9,100 +9,83 @@
 
 {% block content %}
 
-    <div class="container">
-        <h1 class="tagline">..be even more awesome..</h1>
-    </div>
+    <div class="section-end section-end-white"></div>
+    <div class="section section-stretch section-lightgray">
 
-    <div id="carousel-main" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-main" data-slide-to="1"></li>
-            <li data-target="#carousel-main" data-slide-to="2"></li>
-            <li data-target="#carousel-main" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Mask -->
-        <div class="carousel-mask"></div>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-
-{#            <div class="item">#}
-{#                <img src="http://webdesigntutsplus.s3.amazonaws.com/tuts/342_bootstrap_carousel/Carousel-Files-COMPLETE/img/echo.jpg"#}
-{#                     alt="universe" style="">#}
-{##}
-{#                <div class="container">#}
-{#                    <div class="carousel-caption">#}
-{#                        <h1>Bootstrap 3 Carousel Layout</h1>#}
-{##}
-{#                        <p>This is an example layout with carousel that uses the Bootstrap 3 styles.#}
-{#                            <a title="Bootstrap 3" href="http://getbootstrap.com" class="">Bootstrap 3 RC 1 is now#}
-{#                                available!</a></p>#}
-{##}
-{#                        <p><a class="btn btn-large btn-primary" href="#">Sign up today</a>#}
-{#                        </p></div>#}
-{#                </div>#}
-{#                                <div class="carousel-caption">#}
-{#                                    Universe#}
-{#                                </div>#}
-{#            </div>#}
-            <div class="item active">
-                <img src="{{ STATIC_URL }}pages/images/slideshow/dance.jpg" alt="dance">
-
-                <div class="carousel-caption">
-                    <a class="btn btn-large btn-primary" href="#">Dance Instructor</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="{{ STATIC_URL }}pages/images/slideshow/coaching.jpg" alt="coaching">
-
-                <div class="carousel-caption">
-                    <a class="btn btn-large btn-primary" href="#">Personal Development Coach</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="{{ STATIC_URL }}pages/images/slideshow/webdesign.jpg" alt="webdesign">
-
-                <div class="carousel-caption">
-                    <a class="btn btn-large btn-primary" href="#">Web Developer</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="{{ STATIC_URL }}pages/images/slideshow/geek.jpg" alt="placeholder">
-
-                <div class="carousel-caption">
-                    <a class="btn btn-large btn-primary" href="#">Geek</a>
-                </div>
-            </div>
+        <div class="container">
+            <h1 class="tagline">..be even more awesome..</h1>
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-main" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-main" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+        <div id="carousel-main" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-main" data-slide-to="1"></li>
+                <li data-target="#carousel-main" data-slide-to="2"></li>
+                <li data-target="#carousel-main" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Mask -->
+            <div class="carousel-mask"></div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{{ STATIC_URL }}pages/images/slideshow/dance.jpg" alt="dance">
+
+                    <div class="carousel-caption">
+                        <a class="btn btn-large btn-primary" href="#">Dance Instructor</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{ STATIC_URL }}pages/images/slideshow/coaching.jpg" alt="coaching">
+
+                    <div class="carousel-caption">
+                        <a class="btn btn-large btn-primary" href="#">Personal Development Coach</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{ STATIC_URL }}pages/images/slideshow/webdesign.jpg" alt="webdesign">
+
+                    <div class="carousel-caption">
+                        <a class="btn btn-large btn-primary" href="#">Web Developer</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{ STATIC_URL }}pages/images/slideshow/geek.jpg" alt="placeholder">
+
+                    <div class="carousel-caption">
+                        <a class="btn btn-large btn-primary" href="#">Geek</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-main" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-main" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </div>
+
     </div>
+    <div class="section-end section-end-lightgrey"></div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>Hello, world!</h1>
+    <div class="section section-grey">
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
 
-        <p>This is a template for a simple marketing or informational website. It includes a large callout
-            called the hero unit and three supporting pieces of content. Use it as a starting point to create
-            something more unique.</p>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout
+                called the hero unit and three supporting pieces of content. Use it as a starting point to create
+                something more unique.</p>
 
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
     </div>
+    <div class="section-end section-end-grey"></div>
 
-    <div class="container">
-        test
-    </div>
-
-    <div class="container">
-
+    <div class="section container">
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-lg-4">
