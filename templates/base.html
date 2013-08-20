@@ -47,7 +47,7 @@
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
     <script src="//eraldo.org/eraldo/static/script.js"
             type="text/javascript"></script>
@@ -66,18 +66,67 @@
 
 <div id="wrap">
 
+{#<nav class="container navbar navbar-default" role="navigation">#}
+{#  <!-- Brand and toggle get grouped for better mobile display -->#}
+{#  <div class="navbar-header">#}
+{#    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">#}
+{#      <span class="sr-only">Toggle navigation</span>#}
+{#      <span class="icon-bar"></span>#}
+{#      <span class="icon-bar"></span>#}
+{#      <span class="icon-bar"></span>#}
+{#    </button>#}
+{#    <a class="navbar-brand" href="#">Brand</a>#}
+{#  </div>#}
+{##}
+{#  <!-- Collect the nav links, forms, and other content for toggling -->#}
+{#  <div class="collapse navbar-collapse navbar-ex1-collapse">#}
+{#    <ul class="nav navbar-nav">#}
+{#      <li class="active"><a href="#">Link</a></li>#}
+{#      <li><a href="#">Link</a></li>#}
+{#      <li class="dropdown">#}
+{#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
+{#        <ul class="dropdown-menu">#}
+{#          <li><a href="#">Action</a></li>#}
+{#          <li><a href="#">Another action</a></li>#}
+{#          <li><a href="#">Something else here</a></li>#}
+{#          <li><a href="#">Separated link</a></li>#}
+{#          <li><a href="#">One more separated link</a></li>#}
+{#        </ul>#}
+{#      </li>#}
+{#    </ul>#}
+{#    <form class="navbar-form navbar-left" role="search">#}
+{#      <div class="form-group">#}
+{#        <input type="text" class="form-control" placeholder="Search">#}
+{#      </div>#}
+{#      <button type="submit" class="btn btn-default">Submit</button>#}
+{#    </form>#}
+{#    <ul class="nav navbar-nav navbar-right">#}
+{#      <li><a href="#">Link</a></li>#}
+{#      <li class="dropdown">#}
+{#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
+{#        <ul class="dropdown-menu">#}
+{#          <li><a href="#">Action</a></li>#}
+{#          <li><a href="#">Another action</a></li>#}
+{#          <li><a href="#">Something else here</a></li>#}
+{#          <li><a href="#">Separated link</a></li>#}
+{#        </ul>#}
+{#      </li>#}
+{#    </ul>#}
+{#  </div><!-- /.navbar-collapse -->#}
+{#</nav>#}
+
     <div class="container">
 
-        <div id="main-menu" class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="50">
+        <div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
             <div class="container">
 
                 <div class="row" style="text-align: center; height: 100%;">
 
-                    <div class="menu-bar menu-bar-left col-4">
-                        <a class="btn menu-btn visible-sm" href="javascript:;" data-toggle="collapse"
-                           data-target=".nav-collapse" onclick="$('.menu-btn').toggleClass('menu-btn-close');"></a>
+                    <div class="menu-bar menu-bar-left col-xs-4">
+                        <a class="btn menu-btn visible-xs" href="javascript:;" data-toggle="collapse"
+                           data-target=".navbar-collapse" onclick="$('.menu-btn').toggleClass('menu-btn-close');"></a>
 
-                        <div class="nav-collapse collapse">
+                        <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
 {#                                <li class="menu-link icon-link"><a href="{% url 'pages:home' %}">home</a></li>#}
                                 <li class="menu-link active"><a href="{% url 'pages:home' %}">about</a></li>
@@ -89,13 +138,15 @@
                                         <li><a href="#">Dance</a></li>
                                         <li><a href="#">Web Design</a></li>
                                         <li><a href="#">Technology</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">List header</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="menu-bar menu-bar-center col-4">
+                    <div class="menu-bar menu-bar-center col-xs-4">
                         <a href="#about">
                             <div class="logo-img">
                                 <a href="{% url 'pages:home' %}">
@@ -106,18 +157,18 @@
                             <div class="logo-bar">
                                 <a class="logo-text" href="{% url 'pages:home' %}" title="Home">eraldo</a>
                             </div>
-                            <div class="call-bar nav-collapse collapse">
-                                <a class="btn btn-lg call-btn visible-sm" href="tel:+4369910203039"
+                            <div class="call-bar navbar-collapse collapse">
+                                <a class="btn btn-lg call-btn visible-xs" href="tel:+4369910203039"
                                    title="call Eraldo"></a>
                             </div>
                         </a>
                     </div>
 
-                    <div class="menu-bar menu-bar-right col-4">
-                        <a class="btn menu-btn visible-sm" href="javascript:;" data-toggle="collapse"
-                           data-target=".nav-collapse" onclick="$('.menu-btn').toggleClass('menu-btn-close');"></a>
+                    <div class="menu-bar menu-bar-right col-xs-4">
+                        <a class="btn menu-btn visible-xs" href="javascript:;" data-toggle="collapse"
+                           data-target=".navbar-collapse" onclick="$('.menu-btn').toggleClass('menu-btn-close');"></a>
 
-                        <div class="nav-collapse collapse">
+                        <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="menu-link"><a href="#blog">blog</a></li>
                                 <li class="menu-link"><a href="{% url 'pages:contact' %}">contact</a></li>
@@ -144,11 +195,11 @@
 <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="dongle dongle-bottom"></div>
     <div class="container" style="padding-top: 0px;">
-        <div class="footer-bar footer-bar-left col-3 col-sm-4">
-            <a href="#" class="text-muted credit hidden-sm">© 2013 CoGame Webdesign</a>
-            <a href="#" class="text-muted credit visible-sm">©</a>
+        <div class="footer-bar footer-bar-left col-xs-3 col-sm-4">
+            <a href="#" class="text-muted credit hidden-xs">© 2013 CoGame Webdesign</a>
+            <a href="#" class="text-muted credit visible-xs">©</a>
         </div>
-        <div class="footer-bar footer-bar-middle logo-bar col-6 col-sm-4">
+        <div class="footer-bar footer-bar-middle logo-bar col-xs-6 col-sm-4">
             <div class="social-bar">
                 <a class="social social-facebook" href="https://www.facebook.com/Eraldo" target="_blank"></a>
                 <a class="social social-google" href="https://plus.google.com/u/0/102746258450496109858" target="_blank"></a>
@@ -157,9 +208,9 @@
                 <a class="logo-text" href="#">eraldo</a>
             </div>
         </div>
-        <div class="footer-bar footer-bar-right col-3 col-sm-4">
-            <a href="{% url 'pages:contact' %}" class="text-muted credit hidden-sm">✉ Contact Eraldo Helal</a>
-            <a href="#" class="text-muted credit visible-sm">✉</a>
+        <div class="footer-bar footer-bar-right col-xs-3 col-sm-4">
+            <a href="{% url 'pages:contact' %}" class="text-muted credit hidden-xs">✉ Contact Eraldo Helal</a>
+            <a href="#" class="text-muted credit visible-xs">✉</a>
         </div>
     </div>
 </div>
@@ -175,7 +226,7 @@
 
 {# bootstrap #}
 <!-- Latest compiled and minified JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 {% block extra-script %}{% endblock %}
 

@@ -24,11 +24,25 @@ body .content {
     padding-right: 30px;
 }
 
+div.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 @media screen and (min-width: 768px) {
     body .content {
         padding-left: 60px;
         padding-right: 60px;
     }
+}
+
+#main-menu {
+    border-color: transparent;
+}
+
+#main-menu .navbar-collapse {
+    border: none;
+    box-shadow: none;
 }
 
 #main-menu, #footer {
@@ -119,6 +133,7 @@ body .content {
 
 #main-menu .logo-img img {
     width: 120px;
+    display: inline;
 }
 
 #main-menu .logo-img img:hover {
@@ -222,7 +237,7 @@ body .content {
     height: 100%;
     z-index: 10;
     pointer-events: none;
-    background-size: 100%;
+    background-size: cover;
 }
 
 #carousel-main .carousel-caption {
