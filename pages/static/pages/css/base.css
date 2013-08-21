@@ -37,7 +37,7 @@ div.container {
 }
 
 #main-menu {
-    border-color: transparent;
+    border: none;
 }
 
 #main-menu .navbar-collapse {
@@ -178,15 +178,18 @@ div.container {
 }
 
 #main-menu .call-bar > a {
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 #main-menu .call-btn {
     display: inline-block;
     height: 60px;
     width: 60px;
-    background-image: url("http://midhungmenon.com/img/phone_button.png");
+    background-image: url("../images/call-btn.png");
     background-size: 60px 60px;
+}
+#main-menu .call-btn:hover {
+    background-image: url("../images/call-btn-hover.png");
 }
 
 .dongle {
@@ -215,7 +218,7 @@ div.container {
 #main-menu .logo-bar {
     z-index: 100;
     position: relative;
-    margin-bottom: -16px !important;
+    margin-bottom: -21px !important;
 }
 
 .tagline {
@@ -250,6 +253,7 @@ div.container {
 
 #carousel-main .carousel-caption a {
     background-color: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
 #carousel-main .carousel-caption a:hover {
@@ -445,4 +449,19 @@ div.container {
 
 .section-end-black {
     background: transparent url("../images/dongle/dongle_down_black.png");
+}
+
+/* content */
+#vcard {
+    margin-bottom: 0;
+}
+#vcard img {
+    display: inline;
+}
+#vcard a {
+    text-decoration: none;
+}
+
+#contact-form {
+    text-align: center;
 }

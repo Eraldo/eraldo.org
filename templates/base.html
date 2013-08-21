@@ -66,58 +66,59 @@
 
 <div id="wrap">
 
-{#<nav class="container navbar navbar-default" role="navigation">#}
-{#  <!-- Brand and toggle get grouped for better mobile display -->#}
-{#  <div class="navbar-header">#}
-{#    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">#}
-{#      <span class="sr-only">Toggle navigation</span>#}
-{#      <span class="icon-bar"></span>#}
-{#      <span class="icon-bar"></span>#}
-{#      <span class="icon-bar"></span>#}
-{#    </button>#}
-{#    <a class="navbar-brand" href="#">Brand</a>#}
-{#  </div>#}
-{##}
-{#  <!-- Collect the nav links, forms, and other content for toggling -->#}
-{#  <div class="collapse navbar-collapse navbar-ex1-collapse">#}
-{#    <ul class="nav navbar-nav">#}
-{#      <li class="active"><a href="#">Link</a></li>#}
-{#      <li><a href="#">Link</a></li>#}
-{#      <li class="dropdown">#}
-{#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
-{#        <ul class="dropdown-menu">#}
-{#          <li><a href="#">Action</a></li>#}
-{#          <li><a href="#">Another action</a></li>#}
-{#          <li><a href="#">Something else here</a></li>#}
-{#          <li><a href="#">Separated link</a></li>#}
-{#          <li><a href="#">One more separated link</a></li>#}
-{#        </ul>#}
-{#      </li>#}
-{#    </ul>#}
-{#    <form class="navbar-form navbar-left" role="search">#}
-{#      <div class="form-group">#}
-{#        <input type="text" class="form-control" placeholder="Search">#}
-{#      </div>#}
-{#      <button type="submit" class="btn btn-default">Submit</button>#}
-{#    </form>#}
-{#    <ul class="nav navbar-nav navbar-right">#}
-{#      <li><a href="#">Link</a></li>#}
-{#      <li class="dropdown">#}
-{#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
-{#        <ul class="dropdown-menu">#}
-{#          <li><a href="#">Action</a></li>#}
-{#          <li><a href="#">Another action</a></li>#}
-{#          <li><a href="#">Something else here</a></li>#}
-{#          <li><a href="#">Separated link</a></li>#}
-{#        </ul>#}
-{#      </li>#}
-{#    </ul>#}
-{#  </div><!-- /.navbar-collapse -->#}
-{#</nav>#}
+    {#<nav class="container navbar navbar-default" role="navigation">#}
+    {#  <!-- Brand and toggle get grouped for better mobile display -->#}
+    {#  <div class="navbar-header">#}
+    {#    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">#}
+    {#      <span class="sr-only">Toggle navigation</span>#}
+    {#      <span class="icon-bar"></span>#}
+    {#      <span class="icon-bar"></span>#}
+    {#      <span class="icon-bar"></span>#}
+    {#    </button>#}
+    {#    <a class="navbar-brand" href="#">Brand</a>#}
+    {#  </div>#}
+    {##}
+    {#  <!-- Collect the nav links, forms, and other content for toggling -->#}
+    {#  <div class="collapse navbar-collapse navbar-ex1-collapse">#}
+    {#    <ul class="nav navbar-nav">#}
+    {#      <li class="active"><a href="#">Link</a></li>#}
+    {#      <li><a href="#">Link</a></li>#}
+    {#      <li class="dropdown">#}
+    {#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
+    {#        <ul class="dropdown-menu">#}
+    {#          <li><a href="#">Action</a></li>#}
+    {#          <li><a href="#">Another action</a></li>#}
+    {#          <li><a href="#">Something else here</a></li>#}
+    {#          <li><a href="#">Separated link</a></li>#}
+    {#          <li><a href="#">One more separated link</a></li>#}
+    {#        </ul>#}
+    {#      </li>#}
+    {#    </ul>#}
+    {#    <form class="navbar-form navbar-left" role="search">#}
+    {#      <div class="form-group">#}
+    {#        <input type="text" class="form-control" placeholder="Search">#}
+    {#      </div>#}
+    {#      <button type="submit" class="btn btn-default">Submit</button>#}
+    {#    </form>#}
+    {#    <ul class="nav navbar-nav navbar-right">#}
+    {#      <li><a href="#">Link</a></li>#}
+    {#      <li class="dropdown">#}
+    {#        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
+    {#        <ul class="dropdown-menu">#}
+    {#          <li><a href="#">Action</a></li>#}
+    {#          <li><a href="#">Another action</a></li>#}
+    {#          <li><a href="#">Something else here</a></li>#}
+    {#          <li><a href="#">Separated link</a></li>#}
+    {#        </ul>#}
+    {#      </li>#}
+    {#    </ul>#}
+    {#  </div><!-- /.navbar-collapse -->#}
+    {#</nav>#}
 
     <div class="container">
 
-        <div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
+        <div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix"
+             data-offset-top="50">
             <div class="container">
 
                 <div class="row" style="text-align: center; height: 100%;">
@@ -128,7 +129,7 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-{#                                <li class="menu-link icon-link"><a href="{% url 'pages:home' %}">home</a></li>#}
+                                {#                                <li class="menu-link icon-link"><a href="{% url 'pages:home' %}">home</a></li>#}
                                 <li class="menu-link active"><a href="{% url 'pages:home' %}">about</a></li>
                                 <li class="menu-link dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">topics <b
@@ -138,8 +139,7 @@
                                         <li><a href="#">Dance</a></li>
                                         <li><a href="#">Web Design</a></li>
                                         <li><a href="#">Technology</a></li>
-                                        <li class="divider"></li>
-                                        <li class="nav-header">List header</li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -150,9 +150,9 @@
                         <a href="#about">
                             <div class="logo-img">
                                 <a href="{% url 'pages:home' %}">
-                                <img class="img-circle img-responsive"
-                                     src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg">
-                                    </a>
+                                    <img class="img-circle img-responsive"
+                                         src="https://lh3.googleusercontent.com/-WRKZhDvjIms/AAAAAAAAAAI/AAAAAAAAD2k/iWsA8CP35No/s120-c/photo.jpg">
+                                </a>
                             </div>
                             <div class="logo-bar">
                                 <a class="logo-text" href="{% url 'pages:home' %}" title="Home">eraldo</a>
@@ -185,8 +185,14 @@
 
     <div id="content" class="container">
         {% block content %}
-
         {% endblock %}
+        <div class="section section-lightgray text-center text-muted" style="padding-top: 8px;padding-bottom: 8px;">
+            <p>This page has been visited 42,148,917 times since last Tuesday afternoon
+                (estimated).
+            <br>
+            © {% now "Y" %} Eraldo Helal | www.eraldo.org | impressum | sitemap | Designed by Eraldo Webdesign
+            </p>
+        </div>
     </div>
 
 
@@ -202,7 +208,8 @@
         <div class="footer-bar footer-bar-middle logo-bar col-xs-6 col-sm-4">
             <div class="social-bar">
                 <a class="social social-facebook" href="https://www.facebook.com/Eraldo" target="_blank"></a>
-                <a class="social social-google" href="https://plus.google.com/u/0/102746258450496109858" target="_blank"></a>
+                <a class="social social-google" href="https://plus.google.com/u/0/102746258450496109858"
+                   target="_blank"></a>
             </div>
             <div class="logo-text-bar">
                 <a class="logo-text" href="#">eraldo</a>
