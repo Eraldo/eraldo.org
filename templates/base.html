@@ -118,7 +118,7 @@
     <div class="container">
 
         <div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix"
-             data-offset-top="50">
+             data-offset-top="20">
             <div class="container">
 
                 <div class="row" style="text-align: center; height: 100%;">
@@ -130,16 +130,15 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 {#                                <li class="menu-link icon-link"><a href="{% url 'pages:home' %}">home</a></li>#}
-                                <li class="menu-link active"><a href="{% url 'pages:home' %}">about</a></li>
+                                <li class="menu-link"><a href="{% url 'pages:home' %}">about</a></li>
                                 <li class="menu-link dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">topics <b
                                             class="caret"></b></a>
                                     <ul class="dropdown-menu pull-left">
-                                        <li><a href="#">Personal Development</a></li>
-                                        <li><a href="#">Dance</a></li>
-                                        <li><a href="#">Web Design</a></li>
-                                        <li><a href="#">Technology</a></li>
-
+                                        <li><a href="{% url 'pages:dance' %}">Dance</a></li>
+                                        <li><a href="{% url 'pages:personal-development' %}">Personal Development</a></li>
+                                        <li><a href="{% url 'pages:web-design' %}">Web Design</a></li>
+                                        <li><a href="{% url 'pages:technology' %}">Technology</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -184,6 +183,7 @@
     </div>
 
     <div id="content" class="container">
+        <div class="dongle"></div>
         {% block content %}
         {% endblock %}
         <div class="section section-lightgray text-center text-muted" style="padding-top: 8px;padding-bottom: 8px;">
@@ -234,6 +234,11 @@
 {# bootstrap #}
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    // determine the active selection in the menu
+    $('#main-menu a[href*="' + location.pathname.split("/")[2] + '"][class!="noselect"]').parent("li").addClass('active');
+</script>
 
 {% block extra-script %}{% endblock %}
 

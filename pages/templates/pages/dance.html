@@ -1,0 +1,779 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    dance
+{% endblock %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="section section-stretch section-lightgray">
+
+        <h1 class="tagline"><i>let us dance</i></h1>
+    </div>
+    <div class="section-end section-end-lightgrey"></div>
+
+    <div class="section row">
+        <div class="submenu-link-bar">
+            <a href="#dance-events" class="submenu-link col-xs-3">Dance Events</a>
+            <a href="#personal-trainer" class="submenu-link col-xs-3">Personal Trainer</a>
+            <a href="#dance-teachers" class="submenu-link col-xs-3">Dance Teachers</a>
+            <a href="#dance-shows" class="submenu-link col-xs-3">Dance Shows</a>
+        </div>
+    </div>
+    <div class="section-end section-end-white"></div>
+
+    <div class="section section-lightgray">
+        <div id="vcard" class="jumbotron">
+            <div class="row" style="text-align: center">
+                <div class="col-xs-12">
+                    <a href="{% url 'pages:contact' %}">
+                        <img src="{{ STATIC_URL }}pages/images/eat-dance-sleep.jpg" class="img-circle img-responsive">
+                    </a>
+                </div>
+                <div class="col-lg-12">
+                    <h1>dance</h1>
+
+                    <p>
+
+                    <h2>Salsa, Bachata, Kizomba & Co.</h2>
+
+                    <div class="well">
+                        <h3>Private Lessons</h3>
+                        I love to dance, listen to and teach Salsa.<br>
+                        If you are interested in learning Salsa from scratch or improving your skill level.<br>
+                        feel free to <a href="{% url 'pages:contact' %}"> contact me</a>.
+                    </div>
+                    <div class="well">
+                        <h3>Workshops</h3>
+                        Together with Nicolas Canales I created a project called <a href="#">Own Style Dance</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-end section-end-e"></div>
+    </div>
+    <div class="section-end section-end-lightgrey"></div>
+
+    <div class="section section-grey">
+
+    <h1 id="dance-events" class="anchor">My Dance Events</h1>
+
+    <div class="well">
+    <table id="dance-events-table" class="table table-striped">
+    <thead>
+    <tr>
+        <th>start</th>
+        <th>end</th>
+        <th>event</th>
+        <th>location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="seperator">
+        <td colspan="4">2014</td>
+    </tr>
+    <tr>
+        <td>2014-01-17</td>
+        <td>2014-01-19</td>
+        <td><a
+                href="http://www.salsacongress.at/">Salsa
+            Congress Innsbruck</a></td>
+        <td>Austria (Innsbruck)</td>
+    </tr>
+    <tr class="seperator">
+        <td colspan="4">2013</td>
+    </tr>
+    <tr>
+        <td>2013-12-10</td>
+        <td>2013-12-14</td>
+        <td><a
+                href="http://www.mysalsacongress.com/world-latin-dance-cup/home">Salsa
+            WM</a></td>
+        <td>Florida (Miami)</td>
+    </tr>
+    <tr>
+        <td>2013-12-06</td>
+        <td>2013-12-09</td>
+        <td><a
+                href="https://www.facebook.com/events/292411484217618/">Salsa
+            Congress Vienna</a></td>
+        <td>Austria (Vienna)</td>
+    </tr>
+    <tr>
+        <td>2013-11-08</td>
+        <td>2013-11-10</td>
+        <td><a
+                href="http://madridsalsafestival.com/">Salsa
+            Congress Madrid</a></td>
+        <td>Spain (Madrid)</td>
+    </tr>
+    <tr>
+        <td>2013-10-11</td>
+        <td>2013-10-12</td>
+        <td><a
+                href="https://www.facebook.com/events/579680038710877/?ref=ts&amp;fref=ts">Salsa
+            Clubbing Salzburg</a></td>
+        <td>Austria (Salzburg)</td>
+    </tr>
+    <tr>
+        <td>2013-09-06</td>
+        <td>2013-09-08</td>
+        <td><a
+                href="http://www.munichsalsacongress.com/">Salsa
+            Congress Munich</a></td>
+        <td>Germany (Munich)</td>
+    </tr>
+    <tr>
+        <td>2013-08-15</td>
+        <td>2013-08-18</td>
+        <td><a
+                href="https://www.facebook.com/pages/Seasky-Salsa-Kizomba-Bachata-Beach-Festival-Ukraine/402575286506308">Salsa
+            Festival Ilyichevsk</a></td>
+        <td>Ukraine (Ilyichevsk)</td>
+    </tr>
+    <tr>
+        <td>2013-08-10</td>
+        <td>2013-08-10</td>
+        <td><a
+                href="https://www.facebook.com/events/147572675412283/">Salsa
+            Mondseeschiff</a></td>
+        <td>Austria (Mondsee)</td>
+    </tr>
+    <tr>
+        <td>2013-07-26</td>
+        <td>2013-07-26</td>
+        <td><a
+                href="https://www.facebook.com/events/396752480433922/">Kizomba
+            Summer Flow</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2013-07-18</td>
+        <td>2013-07-21</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=7013">Salsa
+            Festival Portorose</a></td>
+        <td>Slovenia (Portorose)</td>
+    </tr>
+    <tr>
+        <td>2013-07-05</td>
+        <td>2013-07-07</td>
+        <td><a
+                href="https://www.facebook.com/SalsaFestivalFrankfurt">Salsa
+            Congress Frankfurt</a></td>
+        <td>Germany (Frankfurt)</td>
+    </tr>
+    <tr>
+        <td>2013-05-25</td>
+        <td>2013-05-25</td>
+        <td><a
+                href="http://saborlatino.at/Veranstaltungen_Details.aspx?ID=7040">Salsa
+            en la Playa</a></td>
+        <td>Austria (Vienna)</td>
+    </tr>
+    <tr>
+        <td>2013-05-19</td>
+        <td>2013-05-19</td>
+        <td><a
+                href="https://www.facebook.com/events/410676239030494/">Salsa
+            in the City - GRAND OPENING GALA</a></td>
+        <td>Austria (Vienna)</td>
+    </tr>
+    <tr>
+        <td>2013-05-17</td>
+        <td>2013-05-20</td>
+        <td><a
+                href="http://www.salsabratislava.sk/">Salsa
+            Congress Bratislava</a></td>
+        <td>Bratislava (Slovakia)</td>
+    </tr>
+    <tr>
+        <td>2013-05-11</td>
+        <td>2013-05-11</td>
+        <td><a
+                href="https://www.facebook.com/events/298663650265126/">Kizomba
+            Springday</a> [voted best couple]
+        </td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2013-04-19</td>
+        <td>2013-04-12</td>
+        <td><a
+                href="http://www.eventsbot.com/events/eb274142944">Sabor
+            Spring Festival</a></td>
+        <td>Croatia (Zagreb)</td>
+    </tr>
+    <tr>
+        <td>2013-04-12</td>
+        <td>2013-04-14</td>
+        <td><a
+                href="http://la-salsera.wix.com/festival01">Sexy
+            &amp; Sensual Latin Dance Festival</a> [2. place bachata competition]
+        </td>
+        <td>Austria (Marz)</td>
+    </tr>
+    <tr>
+        <td>2013-04-06</td>
+        <td>2013-04-06</td>
+        <td><a
+                href="http://www.salsa-linz.com/Veranstaltungen_Details.aspx?ID=7014">Linzer
+            Salsa Ball</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2013-02-22</td>
+        <td>2013-02-24</td>
+        <td><a
+                href="http://www.salsafestival.com/">Salsa
+            Congress Z&uuml;rich (Swiss)</a></td>
+        <td>Swiss (Zurich)</td>
+    </tr>
+    <tr>
+        <td>2013-01-18</td>
+        <td>2013-01-20</td>
+        <td><a
+                href="http://www.salsacongress.at/">Salsa
+            Congress Austria</a></td>
+        <td>Austria (Telfs, Innsbruck)</td>
+    </tr>
+    <tr class="seperator">
+        <td colspan="4">2012</td>
+    </tr>
+    <tr>
+        <td>2012-09-28</td>
+        <td>2012-09-30</td>
+        <td><a
+                href="http://www.salseafestival.com/">Salsa
+            Congress Madrid</a></td>
+        <td>Spain (Madrid)</td>
+    </tr>
+    <tr>
+        <td>2012-08-09</td>
+        <td>2012-08-12</td>
+        <td><a
+                href="http://www.mambofestival-munich.com/#!mambo_festival_munich_2012/mainPage">Mambo
+            Festival Munich</a></td>
+        <td>Germany (Munich)</td>
+    </tr>
+    <tr>
+        <td>2012-08-04</td>
+        <td>2012-08-04</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6985">Salsa
+            - Sommer - Beachparty</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2012-07-26</td>
+        <td>2012-07-29</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6810">Salsa
+            Festival Portorose</a></td>
+        <td>Slovenia (Portorose)</td>
+    </tr>
+    <tr>
+        <td>2012-06-30</td>
+        <td>2012-06-30</td>
+        <td><a
+                href="http://www.salsa-linz.com/Veranstaltungen_Details.aspx?ID=6970">Salsa
+            Fiesta Blanca Linz</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2012-06-15</td>
+        <td>2012-06-17</td>
+        <td><a
+                href="http://www.salsaclub-salzburg.at/clubbing6.php">Salsa
+            Clubbing Salzburg</a></td>
+        <td>Austria (Salzburg)</td>
+    </tr>
+    <tr>
+        <td>2012-06-08</td>
+        <td>2012-06-10</td>
+        <td><a
+                href="http://www.salsalove.de/munich/">Salsa
+            Festival Munich (Germany)</a></td>
+        <td>Germany (Munich)</td>
+    </tr>
+    <tr>
+        <td>2012-06-07</td>
+        <td>2012-06-07</td>
+        <td><a
+                href="http://www.salsa-linz.com/Veranstaltungen_Details.aspx?ID=6982">Salsa
+            Streetdance Megaplex</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2012-03-03</td>
+        <td>2012-03-03</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6704">Linzer
+            Salsa Ball</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr class="seperator">
+        <td colspan="4">2011</td>
+    </tr>
+    <tr>
+        <td>2011-10-31</td>
+        <td>2011-10-31</td>
+        <td><a
+                href="http://www.salsa-munich.de/forum-salsa-munich/infos-hinweise-erinnerungen-f57/halloween-salsa-night-2011-weltklasse-mit-anne-anichi-t4832.html">Halloween
+            Salsa Party Munich (Germany)</a></td>
+        <td>Germany (Munich)</td>
+    </tr>
+    <tr>
+        <td>2011-09-22</td>
+        <td>2011-09-26</td>
+        <td><a
+                href="http://www.convencionsalsea.net/">Salsa
+            Convention Madrid (Spain)</a></td>
+        <td>Spain (Madrid)</td>
+    </tr>
+    <tr>
+        <td>2011-06-18</td>
+        <td>2011-06-19</td>
+        <td><a
+                href="http://www.salsa-salzburg.at/blog/2011/06/salsa-clubbing-2011/">Salsa
+            Clubbing Salzburg</a></td>
+        <td>Austria (Salzburg)</td>
+    </tr>
+    <tr>
+        <td>2011-06-12</td>
+        <td>2011-06-15</td>
+        <td><a
+                href="http://www.youtube.com/watch?v=HtnqQGSqOww">Salsa
+            in the City</a> &amp; <a href="http://www.floridita.at/">Floridita
+            Vienna</a></td>
+        <td>Austria (Vienna)</td>
+    </tr>
+    <tr>
+        <td>2011-05-28</td>
+        <td>2011-05-28</td>
+        <td><a
+                href="http://www.love2salsa.at/">Salsa&amp;Bachata
+            - Eat and Dance </a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2011-05-28</td>
+        <td>2011-05-28</td>
+        <td><a
+                href="http://www.youtube.com/watch?v=epNAVScC_Og">Salsa
+            Show Mojitos - Stadtball</a></td>
+        <td>Austria (Laakirchen)</td>
+    </tr>
+    <tr>
+        <td>2011-05-21</td>
+        <td>2011-05-21</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6098">Linzer
+            Salsa Ball</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2011-05-13</td>
+        <td>2011-05-15</td>
+        <td><a
+                href="http://www.salsadance.at/">Salsa
+            Festival K&auml;rnten</a></td>
+        <td>Austria (P&ouml;rtschach, Carinthia)</td>
+    </tr>
+    <tr>
+        <td>2011-03-19</td>
+        <td>2011-03-19</td>
+        <td><a
+                href="http://www.love2salsa.at/">Salsa&amp;Bachata
+            - Eat and Dance </a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2011-03-05</td>
+        <td>2011-03-05</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6264">Sabor
+            Latino Carneval</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2011-02-19</td>
+        <td>2011-02-19</td>
+        <td><a
+                href="http://www.love2salsa.at/">Salsa&amp;Bachata
+            - Eat and Dance </a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2011-02-18</td>
+        <td>2011-02-18</td>
+        <td>Salsa Birthday Event
+        </td>
+        <td>Austria (Walding)</td>
+    <tr>
+    <tr>
+        <td>2011-02-12</td>
+        <td>2011-02-12</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6099">Salsa
+            Clubbing &quot;Fiesta del Amor&quot;</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr class="seperator">
+        <td colspan="4">2010</td>
+    </tr>
+    <tr>
+        <td>2010-11-07</td>
+        <td>2010-11-07</td>
+        <td>French Salsa Workshop</td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2010-11-06</td>
+        <td>2010-11-06</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=6093">Salsa
+            Clubbing &quot;Fiesta Roja&quot;</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2010-05-01</td>
+        <td>2010-05-01</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=5881">Salsa
+            Night am Li+Do</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr>
+        <td>2010-03-27</td>
+        <td>2010-03-27</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=5354#!prettyPhoto">Linzer
+            Salsa Ball</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    <tr class="seperator">
+        <td colspan="4">2009</td>
+    </tr>
+    <tr>
+        <td>2009-07-18</td>
+        <td>2009-07-18</td>
+        <td><a
+                href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=5265">Salsa
+            Sabor Schiff</a></td>
+        <td>Austria (Linz)</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+
+    <h1 id="personal-trainer" class="anchor">My Personal Trainer</h1>
+
+    <div class="well">
+        <a href="https://www.facebook.com/canalesnicolas" target="_blank">Nicolas Poblate Canales</a>
+    </div>
+
+    <h1 id="dance-teachers" class="anchor">My Dance Teachers</h1>
+
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item active"><h4>Couples / Singles</h4></li>
+            <li class="list-group-item"><a href="https://www.facebook.com/canalesnicolas">Nicolas Poblate
+                Canales</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/ursula.flores.ortega">Ursula Flores Ortega</a>
+            </li>
+
+            <li class="list-group-item"><a href="http://www.love2salsa.at/wir.html">Manu Waldbauer &amp; Rene
+                Waldbauer</a></li>
+
+            <li class="list-group-item"><a href="http://www.salsa-linz.com/">Geraldo Hemelmayr</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/yuri.pozo">Yuri Pozo</a></li>
+
+            <li class="list-group-item"><a href="http://www.adrianyanita.com/index.php/biografia">Adri&aacute;n Rodr&iacute;guez
+                Carbajal &amp; Anita Santos Rub&iacute;n</a></li>
+
+            <li class="list-group-item"><a href="http://www.juniorandemily.com/">Junior Alibi &amp; Emily
+                Alibi</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/AlexAyelet">Alex Leyzer &amp; Ayelet
+                Haliva</a></li>
+
+            <li class="list-group-item"><a href="http://www.palante.eu/enaboutus.php?&amp;id=3">Evgeni
+                Markov</a>&nbsp;&amp; <a class="c2"
+                                         href="http://www.palante.eu/enaboutus.php?&amp;id=2">Liliana
+                Gueorguieva Konstantinova</a></li>
+
+            <li class="list-group-item"><a href="http://www.mirodance.com/">Miroslav Ivanov &amp; Denitsa Mitakova
+                Ivanova</a></li>
+
+            <li class="list-group-item"><a href="http://en.wikipedia.org/wiki/Eddie_Torres">Eddie Torres (aka Mambo
+                King)</a>&nbsp;&amp; <a class="c2"
+                                        href="https://www.facebook.com/shani.talmor">Shani
+                Talmor</a></li>
+
+            <li class="list-group-item"><a class="c2"
+                                           href="http://www.latinmotion.com.au/about-us/our-instructors/oliver-pineda">Oliver
+                Pineda</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/manuel.mascarell">Manuel
+                Mascarell</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/atacajorgie">Jorge Burgos</a>&nbsp;(Ataca)
+                &amp;
+                <a href="https://www.facebook.com/LaAlemana813">Tanja Kensinger</a>&nbsp;(La Alemana)
+            </li>
+
+            <li class="list-group-item"><a href="http://www.salsa-dance-professional.com/juan-matos.html">Juan
+                Matos</a>&nbsp;&amp; <a class="c2"
+                                        href="https://www.facebook.com/amnerismartinez27">Amneris
+                Martinez</a>&nbsp;[Ita, Spa]
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/terry.tauliaut">Terry Dan Ambroise
+                Tauliaut</a>&nbsp;&amp; <a class="c2"
+                                           href="https://www.facebook.com/cecile.ovide">C&eacute;cile
+                Ovide</a>&nbsp;(Terry &amp; Cecile) [Fra]
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/ivan.puertasgarcia">Iv&aacute;n
+                Puertas</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/lyudmyla.kalyuzhna">Lyudmyla Kalyuzhna</a>&nbsp;[Spa, Ukr]
+            </li>
+
+            <li class="list-group-item"><a href="http://big-spenders.fr/">Frantz Kichenassamy</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/mayssane.assaf">Mayssane Assaf</a>&nbsp;[Fra]
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/gabriel.ballany">Gabriel
+                Ball&aacute;ny</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/beata.kollarova">Beata Kollarova</a>&nbsp;[Svk]
+            </li>
+
+            <li class="list-group-item"><a href="http://www.salsaclub-salzburg.at/salsa_kontakt.php">Edith
+                Homoki</a>&nbsp;&amp;
+                <a href="https://www.facebook.com/sadmir.becirspahic">Sadmir Becirspahic</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/1SalseraLoca">Tanja
+                Oberhammer</a>&nbsp;&amp; <a class="c2"
+                                             href="https://www.facebook.com/ho.ki.796">Hoki</a>
+            </li>
+
+            <li class="list-group-item"><a href="http://www.kikeyfania.com/">Enrique Utrera Cuesta (Kike) &amp;
+                Estefan&iacute;a Sabajanes Jim&eacute;nez (Fan&iacute;a)</a></li>
+
+            <li class="list-group-item"><a href="http://schoolofeverything.com/teacher/christianjean-francois">Christian
+                Jean-Francois</a>&nbsp;&amp; <a class="c2"
+                                                href="http://polestars.net/teacher/shirene-myra-solak/">Shirene
+                Myra Solak</a>&nbsp;(Christian &amp; Shirene)
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/munaquita">Claudia Sabor</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/alexandra.shtetinska">Alexandra
+                Shtetinska</a>&nbsp;&amp; <a class="c2"
+                                             href="https://www.facebook.com/bozhidar.gugushev">Bozhidar
+                Gugushev</a>&nbsp;(Teo)
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/salsa.georg">Georg
+                Kamenov-Kohl</a>&nbsp;&amp; <a class="c2"
+                                               href="https://www.zumba.com/en-US/instructor/ines-kamenov-kohl/272145/">Ines
+                Kamenov-Kohl</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/SalsaHans">Johann Reitmaier (Salsa Hans)</a>&nbsp;&amp;
+                Evelyn
+            </li>
+
+            <li class="list-group-item"><a href="http://facebook.com/gensilf">Gensil Esteban Fermin Guillen (Gensil
+                Fermin)</a>&nbsp;&amp; <a class="c2"
+                                          href="https://www.facebook.com/heike.scherf">Heike
+                Scherf</a></li>
+
+            <li class="list-group-item"><a href="http://www.salsastudioromano.de/salsa/tanzlehrer/aanyo.html">Aanyo
+                Kossi Kuzeawu</a>&nbsp;&amp; <a class="c2"
+                                                href="http://www.mamborico.de/team.php">Ewgenija</a>&nbsp;(
+                <a href="http://www.mamborico.de/">Mamborico</a>)
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/ruedaconjorge">Jorge Morales</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/beigesalsa">Zsuzsanna B&ouml;jte (Beige)</a>
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/djfuerza">Andr&egrave;s Ramirez</a>
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/esteban.henriquezmorales">Esteban Henriquez
+                Morales</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/anke.obermayer.3">Anke Obermayer</a>
+            </li>
+
+            <li class="list-group-item"><a class="c2"
+                                           href="http://www.salsafestival.at/index.php/page/p3_de_workshopleiter.html">Vincent
+                &amp; Viktoria</a></li>
+
+            <li class="list-group-item"><a href="http://www.cubandances.ch/profil.php">Francisco Rodriguez Barbur
+                (Paco)</a></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/victor.ortega">Victor Ortega</a></li>
+
+            <li class="list-group-item"><a href="http://www.afrolatinconnection.com/">Ricardo Sousa &amp; Paula
+                Loureiro</a></li>
+
+            <li class="list-group-item active"><h4>Groups</h4></li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/LosMojitos">Los Mojitos</a></li>
+
+            <li class="list-group-item"><a href="http://www.swinguys.it/">Swing Guys</a></li>
+
+            <li class="list-group-item"><a href="http://www.fuegoypasion.ch/">Fuego y Pasion</a></li>
+
+            <li class="list-group-item"><a href="http://www.mamborico.de/">Mamborico</a></li>
+
+            <li class="list-group-item"><a href="http://www.candente.de/">Grupo Candente</a></li>
+
+            <li class="list-group-item"><a href="http://big-spenders.fr/">Big Spenders</a></li>
+        </ul>
+    </div>
+
+    <h1 id="dance-shows" class="anchor">My Dance Shows</h1>
+
+    <div class="well">
+        <table id="dance-events" class="table table-striped">
+            <thead>
+            <tr>
+                <th>start</th>
+                <th>end</th>
+                <th>event</th>
+                <th>location</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td>2013-07-18</td>
+                <td>2013-07-21</td>
+                <td><a
+                        href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=7013">Salsa
+                    Festival Portorose</a>&nbsp;- Sabor Latino
+                </td>
+                <td>Slovenia (Portorose)</td>
+            <tr>
+
+            <tr>
+                <td>2013-05-25</td>
+                <td>2013-05-25</td>
+                <td><a
+                        href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=7040">Salsa
+                    en la Playa (Open Air)</a>&nbsp;- Vienna Sabor Show
+                </td>
+                <td>Austria (Vienna)</td>
+            <tr>
+
+            <tr>
+                <td>2013-04-06</td>
+                <td>2013-04-06</td>
+                <td><a
+                        href="http://www.salsa-linz.com/Veranstaltungen_Details.aspx?ID=7014">Linzer
+                    Salsa Ball</a>&nbsp;- Sabor Show
+                </td>
+                <td>Austria (Linz)</td>
+            <tr>
+
+            <tr>
+                <td>2011-05-28</td>
+                <td>2011-05-28</td>
+                <td><a
+                        href="http://www.youtube.com/watch?v=epNAVScC_Og">Salsa
+                    Show Mojitos</a>&nbsp;- Stadtball
+                </td>
+                <td>Austria (Laakrichen)</td>
+            <tr>
+
+            <tr>
+                <td>2011-05-21</td>
+                <td>2012-05-21</td>
+                <td><a
+                        href="http://salsa-linz.com/Veranstaltungen_Details.aspx?ID=6098">Linzer
+                    Salsa Ball</a>&nbsp;- Sabor Show
+                </td>
+                <td>Austria (Linz)</td>
+            <tr>
+
+            <tr>
+                <td>2011-05-13</td>
+                <td>2011-05-15</td>
+                <td><a
+                        href="http://www.salsafestival.at/index.php?page=22&amp;gallery=32">Salsa
+                    Festival Carinthia</a>&nbsp;(P&ouml;rtschach/K&auml;rnten)
+                </td>
+                <td>Austria (P&ouml;rtschach, Carinthia)</td>
+            <tr>
+
+            <tr>
+                <td>2011-02-18</td>
+                <td>2011-02-18</td>
+                <td>Birthday Show</td>
+                <td>Austria (Walding)</td>
+            <tr>
+
+            <tr>
+                <td>2010-12-11</td>
+                <td>2010-12-11</td>
+                <td><a
+                        href="https://www.facebook.com/events/159632507408467/">Hornball
+                    Linz Mojitos Show</a>
+                </td>
+                <td>Austria (Linz)</td>
+            <tr>
+
+            <tr>
+                <td>2010-11-27</td>
+                <td>2010-11-27</td>
+                <td><a
+                        href="https://www.facebook.com/events/152615481448218/?ref=nf">Hornball
+                    Linz Mojitos Show</a>
+                </td>
+                <td>Austria (Linz)</td>
+            <tr>
+
+            <tr>
+                <td>2010-11-13</td>
+                <td>2010-11-13</td>
+                <td><a
+                        href="http://www.kuiwa.at/index.php?option=com_content&amp;view=article&amp;id=59&amp;Itemid=61">Gran
+                    Fiesta Latina</a>&nbsp;- Salsa Show with Carolina Rojas
+                </td>
+                <td>Austria (Linz)</td>
+            <tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="section-end section-end-grey"></div>
+
+    <div class="section text-center">
+        <img src="{{ STATIC_URL }}pages/images/salsaholics.jpg" class="img-responsive" style="display: inline">
+    </div>
+
+{% endblock %}
+
+{% block extra-script %}
+    <script>
+        var $root = $('html, body');
+        $('a').click(function () {
+            var href = $.attr(this, 'href');
+            $root.animate({
+                scrollTop: $(href).offset().top
+            }, 500, function () {
+                window.location.hash = href;
+            });
+            return false;
+        });
+    </script>
+{% endblock %}

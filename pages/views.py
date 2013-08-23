@@ -17,6 +17,32 @@ class ContactView(TemplateView):
     template_name = "pages/contact.html"
 
 
+class T42View(TemplateView):
+    template_name = "pages/T42.html"
+
+
+# topics
+
+
+class DanceView(TemplateView):
+    template_name = "pages/dance.html"
+
+
+class PersonalDevelopmentView(TemplateView):
+    template_name = "pages/personal-development.html"
+
+
+class WebDesignView(TemplateView):
+    template_name = "pages/web-design.html"
+
+
+class TechnologyView(TemplateView):
+    template_name = "pages/technology.html"
+
+
+# misc
+
+
 class ChatView(TemplateView):
     template_name = "pages/chat.html"
 

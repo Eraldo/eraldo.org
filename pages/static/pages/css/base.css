@@ -11,6 +11,7 @@
 }
 
 body {
+    padding-top: 120px;
     background: #222 url("http://zindustry.com/images/contact-bg.jpg");
     font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -126,8 +127,8 @@ div.container {
 }
 
 #content {
-    background-color: white;
-    padding-top: 120px;
+    /*background-color: white;*/
+    /*padding-top: 120px;*/
     padding-bottom: 50px;
 }
 
@@ -173,6 +174,7 @@ div.container {
 #main-menu li.menu-link {
     min-width: 100px;
 }
+
 #main-menu li.menu-link.icon-link {
     /*min-width: 20px;*/
 }
@@ -188,6 +190,7 @@ div.container {
     background-image: url("../images/call-btn.png");
     background-size: 60px 60px;
 }
+
 #main-menu .call-btn:hover {
     background-image: url("../images/call-btn-hover.png");
 }
@@ -200,11 +203,11 @@ div.container {
     width: 177px;
     height: 32px;
     background-size: 177px 32px;
-    background: url("http://www.infinum.co/assets/menu/section_black_end.png") no-repeat center center;
+    background: url("../images/dongle/dongle_down_dark-marble.png") no-repeat center center;
 }
 
 .dongle.dongle-bottom {
-    -webkit-transform: scaleY(-1);
+    background-image: url("../images/dongle/dongle_up_dark-marble.png");
     margin-bottom: 0;
     margin-top: -32px;
 }
@@ -224,7 +227,6 @@ div.container {
 .tagline {
     text-align: center;
 }
-
 
 #carousel-main {
     margin-bottom: 20px;
@@ -341,12 +343,15 @@ div.container {
 #footer {
     text-align: center;
 }
+
 #footer .footer-bar-left {
     text-align: right;
 }
+
 #footer .footer-bar-right {
     text-align: left;
 }
+
 #footer .footer-bar-middle {
 }
 
@@ -394,7 +399,6 @@ div.container {
     text-decoration: none;
 }
 
-
 .section {
     padding: 20px 20px;
     padding-top: 30px;
@@ -421,6 +425,7 @@ div.container {
 .section-grey {
     background-color: gray;
 }
+
 .section-lightgray {
     background-color: lightgray;
 }
@@ -436,9 +441,11 @@ div.container {
 .section-end-grey {
     background: transparent url("../images/dongle/dongle_down_grey.png");
 }
+
 .section-end-lightgrey {
     background: transparent url("../images/dongle/dongle_down_lightgray.png");
 }
+
 .section-end-f4 {
     background: transparent url("../images/dongle/dongle_down_f4.png");
 }
@@ -455,13 +462,47 @@ div.container {
 #vcard {
     margin-bottom: 0;
 }
+
 #vcard img {
     display: inline;
 }
+
 #vcard a {
     text-decoration: none;
 }
 
 #contact-form {
     text-align: center;
+}
+
+#dance-events-table tr.seperator td {
+    background-color: white;
+}
+
+.submenu-link-bar {
+    text-align: center;
+}
+
+.submenu-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 10px;
+}
+
+.submenu-link:hover {
+    border-bottom: 4px solid #357ebd;
+    margin-bottom: -4px;
+    /*background-color: #357ebd;*/
+    text-decoration: none;
+}
+
+/*a:hover {*/
+/*text-decoration: none !important;*/
+/*border-bottom: 4px solid #357ebd;*/
+/*margin-bottom: -4px;*/
+/*}*/
+
+.anchor {
+    padding-top: 80px;
+    margin-top: -80px;
 }
