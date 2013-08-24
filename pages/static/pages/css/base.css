@@ -432,6 +432,7 @@ div.container {
 
 .section-black {
     background-color: black;
+    color: lightgray;
 }
 
 .section-end-white {
@@ -496,6 +497,9 @@ div.container {
     text-decoration: none;
 }
 
+/*TODO: experimental:*/
+/*it would be a nice idea to have all links on my page to have the same hover effekt.*/
+/*linke a blue border. At the moment this produced some sideeffekts e.g. on links that are styled as buttons.*/
 /*a:hover {*/
 /*text-decoration: none !important;*/
 /*border-bottom: 4px solid #357ebd;*/
