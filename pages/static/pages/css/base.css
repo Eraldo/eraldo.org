@@ -579,3 +579,22 @@ blockquote small:after{
     position: absolute;
     z-index: 5;
 }
+
+#messages {
+    margin-bottom: -20px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+#messages .alert {
+    text-align: center;
+    padding: 15px 35px;
+}
+#messages .alert .close {
+    margin-right: -21px;
+    right: inherit;
+}
+
+/* django-cirspy-forms */
+.asteriskField {
+    color: #357ebd;;
+}

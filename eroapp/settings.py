@@ -135,6 +135,7 @@ INSTALLED_APPS = (
 
     # helper apps
     'south', # data migration
+    'crispy_forms', # nice form layouting
 )
 
 # A sample logging configuration. The only tangible logging
@@ -184,7 +185,6 @@ AUTH_USER_MODEL = 'users.User'
 FIXTURE_DIRS = (
     os.path.join(PROJECT_DIR, 'eroapp/fixtures/'),
 )
-
 
 # import local overwrite settings
 try:
