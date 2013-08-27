@@ -510,3 +510,72 @@ div.container {
     padding-top: 80px;
     margin-top: -80px;
 }
+
+a.btn-xl {
+    padding: 30px 36px;
+    border-radius: 26px;
+}
+
+blockquote small:before {
+    content: '\2014 \00A0';
+}
+blockquote small:after{
+    content: '\00A0 \2014';
+}
+
+#stellar-container {
+    padding: 0;
+    width: 100%;
+    height: 525px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    /*top: 0;*/
+}
+/*#stellar-bg {*/
+    /*background: url("http://www.designbyjakob.at/img/works_bg.jpg") no-repeat center center;*/
+    /*min-height: 600px;*/
+    /*width: 100%;*/
+    /*position: relative;*/
+/*}*/
+
+#stellar-slide1 {
+    background: url("http://michaeldoyle.eu/blog/wp-content/uploads/2009/04/wallpaper.jpg") no-repeat center center;
+    /*background-attachment: fixed;*/
+    /*background-size: 100%;*/
+    width: 100%;
+    height: 525px;
+    position: absolute;
+    z-index: 1;
+}
+
+#stellar-slide2 {
+    background: url("../images/web-design/btn-act-bottom.png") no-repeat center center;
+    /*background-attachment: fixed;*/
+    /*background-size: contain;*/
+    width: 100%;
+    height: 525px;
+    position: absolute;
+    z-index: 1;
+}
+#stellar-content {
+    padding-top: 200px;
+    width: 100%;
+    height: 125px;
+    /*text-align: center;*/
+    position: absolute;
+    /*top:0;*/
+    z-index: 10;
+}
+#stellar-content a {
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+}
+#stellar-slide3 {
+    background: url("../images/web-design/btn-act-top.png") no-repeat center center;
+    width: 100%;
+    height: 525px;
+    position: absolute;
+    z-index: 5;
+}

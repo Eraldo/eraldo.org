@@ -3,18 +3,27 @@
 This module contains the web pages based views.
 """
 from django.contrib import messages
+from pages.forms import ContactForm
 
 __author__ = "Eraldo Helal"
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
 
 
 class HomeView(TemplateView):
     template_name = "pages/home.html"
 
 
-class ContactView(TemplateView):
+class ContactView(FormView):
     template_name = "pages/contact.html"
+    form_class = ContactForm
+    success_url = '.'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.send_email()
+        return super(ContactView, self).form_valid(form)
 
 
 class T42View(TemplateView):
@@ -49,6 +58,7 @@ class ChatView(TemplateView):
 
 class TestView(TemplateView):
     template_name = "pages/test.html"
+
     def get(self, request, *args, **kwargs):
         messages.info(request, 'Welcome to the Legend of..')
         messages.success(request, 'AWESOME')
