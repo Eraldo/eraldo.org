@@ -134,7 +134,7 @@
                                 <li class="menu-link dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">topics <b
                                             class="caret"></b></a>
-                                    <ul class="dropdown-menu pull-left">
+                                    <ul class="dropdown-menu pull-left text-left">
                                         <li><a href="{% url 'pages:dance' %}">Dance</a></li>
                                         <li><a href="{% url 'pages:personal-development' %}">Personal Development</a>
                                         </li>
@@ -199,11 +199,11 @@
 
         {% block content %}
         {% endblock %}
-        <div class="section section-lightgray text-center text-muted" style="padding-top: 8px;padding-bottom: 8px;">
+        <div id="content-footer" class="section section-lightgray text-center text-muted" style="padding-top: 8px;padding-bottom: 8px;">
             <p>This page has been visited 42,148,917 times since last Tuesday afternoon
                 (estimated).
                 <br>
-                © {% now "Y" %} Eraldo Helal | www.eraldo.org | impressum | sitemap | Designed by Eraldo Webdesign
+                © {% now "Y" %} Eraldo Helal | <a href="{% url 'pages:home' %}">www.eraldo.org</a> | <a href="{% url 'pages:contact' %}">impressum</a> | <a href="{% url 'pages:contact' %}">sitemap</a> | <a href="{% url 'pages:contact' %}">Designed by Eraldo Webdesign</a>
             </p>
         </div>
     </div>
@@ -215,8 +215,8 @@
     <div class="dongle dongle-bottom"></div>
     <div class="container" style="padding-top: 0px;">
         <div class="footer-bar footer-bar-left col-xs-3 col-sm-4">
-            <a href="#" class="text-muted credit hidden-xs">© 2013 CoGame Webdesign</a>
-            <a href="#" class="text-muted credit visible-xs">©</a>
+            <a href="{% url 'pages:web-design' %}" class="text-muted credit hidden-xs">© 2013 Eraldo Webdesign</a>
+            <a href="{% url 'pages:web-design' %}" class="text-muted credit visible-xs">©</a>
         </div>
         <div class="footer-bar footer-bar-middle logo-bar col-xs-6 col-sm-4">
             <div class="social-bar">

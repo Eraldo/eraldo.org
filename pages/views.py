@@ -19,10 +19,6 @@ class ContactView(FormView):
     form_class = ContactForm
     success_url = '.'
 
-    def get(self, request, *args, **kwargs):
-        messages.success(self.request, 'Your message has been sent.')
-        return super(ContactView, self).get(request, *args, **kwargs)
-
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.

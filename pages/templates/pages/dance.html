@@ -26,6 +26,11 @@
         #plusgallery.dark-gallery #pgthumbcrumbs {
             color: white;
         }
+
+        .pgzoomcaption {
+            bottom: 60px;
+        }
+
         .dance-colored {
             border-radius: 50%;
             background-color: black !important;
@@ -33,10 +38,12 @@
             background-size: 100%;
             color: white;
         }
+
         .dance-colored h2 {
             background-color: black;
             margin: 0 25%;
         }
+
         .color-banner {
             background: url("https://sites.google.com/a/eraldo.org/dance/_/rsrc/1375237024851/register/bg.png");
             background-size: cover;
@@ -44,7 +51,7 @@
         }
 
         .color-border:hover {
-            border-width:0 0 4px;
+            border-width: 0 0 4px;
             border-image: url("https://sites.google.com/a/eraldo.org/dance/_/rsrc/1375237024851/register/bg.png") 0 0 4 0 stretch stretch;
         }
     </style>
@@ -83,23 +90,30 @@
                     <p>
 
                     <div class="well dance-colored">
-                    <h2>Salsa, Bachata, Kizomba & Co.</h2>
-                        <img src="https://sites.google.com/a/eraldo.org/dance/_/rsrc/1368233281986/config/dance-banner-sfit.png.1368233280662.png" width="50%">
+                        <h2>Salsa, Bachata, Kizomba & Co.</h2>
+                        <img src="https://sites.google.com/a/eraldo.org/dance/_/rsrc/1368233281986/config/dance-banner-sfit.png.1368233280662.png"
+                             width="50%">
                     </div>
                     <div class="well">
                         <h3>Private Lessons</h3>
+
                         <div class="color-banner"></div>
                         I love to dance, listen to and teach Salsa.<br>
                         If you are interested in learning Salsa from scratch or improving your skill level.<br>
                         feel free to <a href="{% url 'pages:contact' %}"> contact me</a>.
-{#                        <div class="color-banner"></div>#}
+                        {#                        <div class="color-banner"></div>#}
                     </div>
                     <div class="well">
-{#                        <div class="color-banner"></div>#}
-                        <h3>Workshops</h3>
+                        {#                        <div class="color-banner"></div>#}
+                        <h3 id="workshops">Workshops</h3>
+
                         <div class="color-banner"></div>
                         Together with Nicolas Canales I created a project called <a href="#">Own Style Dance</a>.<br>
                         Starting in September we will make sure that there are enough Workshops and Events for you guys.<br>
+
+                        <p>There will also be a <em>special workshop series</em>:<br>
+                        <pre>&#60;music&#62;<b>DANCE FOR ENGINEERS</b>&#60;/music&#62;</pre>
+                        </p>
                         In order to keep updated - just <a href="{% url 'pages:contact' %}"> contact me</a>.
                         </p>
                     </div>
@@ -112,6 +126,7 @@
 
     <div class="section section-black text-center">
         <h1 id="dance-gallery" class="anchor">My Dance Gallery</h1>
+
         <div class="color-banner"></div>
 
         <div id="plusgallery" class="dark-gallery"
@@ -129,6 +144,7 @@
     <div class="section section-grey">
 
     <h1 id="dance-events" class="anchor">My Dance Events</h1>
+
     <div class="color-banner"></div>
 
     <div class="well">
@@ -543,6 +559,7 @@
     </div>
 
     <h1 id="dance-teachers" class="anchor">My Dance Teachers</h1>
+
     <div class="color-banner"></div>
 
     <div>
@@ -624,6 +641,14 @@
                 Puertas</a>&nbsp;&amp;
                 <a href="https://www.facebook.com/lyudmyla.kalyuzhna" target="_blank">Lyudmyla Kalyuzhna</a>&nbsp;[Spa,
                 Ukr]
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/falco.benalcazar" target="_blank">Falco
+                Benalcazar</a>&nbsp;[ECU]
+            </li>
+
+            <li class="list-group-item"><a href="https://www.facebook.com/albir.rojasdos" target="_blank">Albir Rojas</a>&nbsp;[Pan]&nbsp;&amp;
+                <a href="https://www.facebook.com/albirysara" target="_blank">Sara Lopez Martines</a>&nbsp;[Spa]
             </li>
 
             <li class="list-group-item"><a href="http://big-spenders.fr/" target="_blank">Frantz Kichenassamy</a>&nbsp;&amp;
@@ -741,6 +766,7 @@
     </div>
 
     <h1 id="dance-shows" class="anchor">My Dance Shows</h1>
+
     <div class="color-banner"></div>
 
     <div class="well">

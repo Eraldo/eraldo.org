@@ -598,3 +598,13 @@ blockquote small:after{
 .asteriskField {
     color: #357ebd;;
 }
+
+#content-footer a {
+    text-decoration: none;
+    color: #999;
+}
+
+/*.jumbotron {*/
+    /*background: url("http://static.tumblr.com/83c195629fd1eb101b8ad0281d4a7c0d/5w5dztq/VTtmocef5/tumblr_static_grey-background-for-site1.jpg");*/
+    /*background-size: cover;*/
+/*}*/
