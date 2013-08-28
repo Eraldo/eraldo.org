@@ -170,7 +170,7 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link"><a href="#blog">blog</a></li>
+                                <li class="menu-link"><a href="#" onmouseover="$(this).popover('show')" onmouseout="$(this).popover('hide')" onclick="return false;"  data-toggle="popover" data-placement="bottom" data-container="body" data-content="Contact me to get notified" data-original-title="Blog coming soon.." title="Blog coming soon..">blog</a></li>
                                 <li class="menu-link"><a href="{% url 'pages:contact' %}">contact</a></li>
                             </ul>
                         </div>
