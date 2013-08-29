@@ -170,7 +170,12 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="menu-link"><a href="#" onmouseover="$(this).popover('show')" onmouseout="$(this).popover('hide')" onclick="return false;"  data-toggle="popover" data-placement="bottom" data-container="body" data-content="Contact me to get notified" data-original-title="Blog coming soon.." title="Blog coming soon..">blog</a></li>
+                                <li class="menu-link"><a href="#" onmouseover="$(this).popover('show')"
+                                                         onmouseout="$(this).popover('hide')" onclick="return false;"
+                                                         data-toggle="popover" data-placement="bottom"
+                                                         data-container="body" data-content="Contact me to get notified"
+                                                         data-original-title="Blog coming soon.."
+                                                         title="Blog coming soon..">blog</a></li>
                                 <li class="menu-link"><a href="{% url 'pages:contact' %}">contact</a></li>
                             </ul>
                         </div>
@@ -186,24 +191,27 @@
     <div id="content" class="container">
         <div class="dongle"></div>
 
-                {% if messages %}
-        <div id="messages" class="section section-lightgray">
-            {% for message in messages %}
-            <div class="alert alert-dismissable{% if message.tags %} alert-{{ message.tags }}{% endif %}">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{ message }}
+        {% if messages %}
+            <div id="messages" class="section section-lightgray">
+                {% for message in messages %}
+                    <div class="alert alert-dismissable{% if message.tags %} alert-{{ message.tags }}{% endif %}">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        {{ message }}
+                    </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
         {% endif %}
 
         {% block content %}
         {% endblock %}
-        <div id="content-footer" class="section section-lightgray text-center text-muted" style="padding-top: 8px;padding-bottom: 8px;">
+        <div id="content-footer" class="section section-lightgray text-center text-muted"
+             style="padding-top: 8px;padding-bottom: 8px;">
             <p>This page has been visited 42,148,917 times since last Tuesday afternoon
                 (estimated).
                 <br>
-                © {% now "Y" %} Eraldo Helal | <a href="{% url 'pages:home' %}">www.eraldo.org</a> | <a href="{% url 'pages:contact' %}">impressum</a> | <a href="{% url 'pages:contact' %}">sitemap</a> | <a href="{% url 'pages:contact' %}">Designed by Eraldo Webdesign</a>
+                © {% now "Y" %} Eraldo Helal | <a href="{% url 'pages:home' %}">www.eraldo.org</a> | <a
+                        href="{% url 'pages:contact' %}">impressum</a> | <a href="{% url 'pages:contact' %}">sitemap</a>
+                | <a href="{% url 'pages:contact' %}">Designed by Eraldo Webdesign</a>
             </p>
         </div>
     </div>
@@ -249,8 +257,11 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 <script>
-    // determine the active selection in the menu
-    $('#main-menu a[href*="' + location.pathname.split("/")[location.pathname.split("/").length-2] + '"][class!="noselect"]').parent("li").addClass('active');
+    {# determine the active selection in the menu #}
+    {#   e.g.: #}
+    {#   path: web/pages/something/?parameter #}
+    {#   will detect "something" and add css class active to the links list element. #}
+    $('#main-menu a[href*="' + location.pathname.split("/")[location.pathname.split("/").length - 2] + '"][class!="noselect"]').parent("li").addClass('active');
 </script>
 
 {% block extra-script %}{% endblock %}
