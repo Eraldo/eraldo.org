@@ -250,7 +250,7 @@
 
 <script>
     // determine the active selection in the menu
-    $('#main-menu a[href*="' + location.pathname.split("/")[2] + '"][class!="noselect"]').parent("li").addClass('active');
+    $('#main-menu a[href*="' + location.pathname.split("/")[location.pathname.split("/").length-2] + '"][class!="noselect"]').parent("li").addClass('active');
 </script>
 
 {% block extra-script %}{% endblock %}
