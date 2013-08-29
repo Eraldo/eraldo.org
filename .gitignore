@@ -16,3 +16,6 @@ media
 
 # ignore IDE config
 .idea
+
+# e.g. picasa index files
+*.ini
