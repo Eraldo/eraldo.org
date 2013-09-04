@@ -178,6 +178,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
 )
 
+
+
 # custom user model
 AUTH_USER_MODEL = 'users.User'
 
@@ -185,6 +187,10 @@ AUTH_USER_MODEL = 'users.User'
 FIXTURE_DIRS = (
     os.path.join(PROJECT_DIR, 'eroapp/fixtures/'),
 )
+
+# crispy_forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 
 # import local overwrite settings
 try:

@@ -19,7 +19,6 @@ class ContactForm(forms.Form):
     message = forms.CharField(label="message", widget=forms.Textarea)
 
     def send_email(self):
-        # TODO: send email with message to eraldo
         # send email using the self.cleaned_data dictionary
 
         email = self.cleaned_data["email"]
