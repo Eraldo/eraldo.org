@@ -29,7 +29,7 @@ class ContactForm(forms.Form):
 
         # production
         subject = "[eraldo.org] message from '{}'".format(email)
-        send_mail(subject, message, 'homepage@eraldo.org', ['eraldo@eraldo.org'])
+        send_mail(subject, message, email, ['eraldo@eraldo.org'])
 
     helper = FormHelper()
     helper.html5_required = True
