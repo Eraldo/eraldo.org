@@ -85,7 +85,7 @@ div.container {
     width: 45px;
     height: 30px;
     background-size: 45px 30px;
-    background: url("http://www.infinum.co/assets/menu/nav_btn.png") no-repeat center center;
+    background: url("../images/menu_btn.png") no-repeat center center;
     padding: 15px;
     margin: 14px auto;
 }
