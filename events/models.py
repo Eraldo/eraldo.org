@@ -17,6 +17,9 @@ class Event(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     modification_date = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ["-start", "-name"]
+
     def __unicode__(self):
         return self.name
 
