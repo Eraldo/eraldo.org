@@ -19,3 +19,7 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def has_url(self):
+        return bool(self.url)
+    has_url.boolean = True

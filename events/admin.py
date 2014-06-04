@@ -3,4 +3,8 @@ from events.models import Event
 
 __author__ = 'eraldo'
 
-admin.site.register(Event)
+
+class EventsAdmin(admin.ModelAdmin):
+    list_display = ('name', 'start', 'end', 'country', 'city', 'has_url')
+
+admin.site.register(Event, EventsAdmin)
