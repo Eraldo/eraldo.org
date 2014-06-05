@@ -10,6 +10,8 @@ class Event(models.Model):
     start = models.DateField(blank=True, null=True)
     end = models.DateField(blank=True, null=True)
 
+    type = models.CharField(max_length=50, blank=True)
+
     country = models.CharField(max_length=50, blank=True)
     city = models.CharField(max_length=50, blank=True)
     url = models.URLField(blank=True)

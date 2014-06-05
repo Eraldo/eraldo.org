@@ -150,37 +150,41 @@
     <div class="color-banner"></div>
 
     <div class="well">
-    <table id="dance-events-table" class="table table-striped">
-    <thead>
-    <tr>
-        <th>start</th>
-        <th>end</th>
-        <th>event name</th>
-        <th>location</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for event in events %}
-        {% ifchanged event.start|date:"Y" %}
-            <tr class="seperator">
-                <td colspan="4">{{ event.start|date:"Y" }}</td>
+        <table id="dance-events-table" class="table table-striped">
+            <thead>
+            <tr>
+                <th>start</th>
+                <th>end</th>
+                <th>event name</th>
+                <th>location</th>
             </tr>
-        {% endifchanged %}
-        <tr>
-            <td>{{ event.start }}</td>
-            <td>{{ event.start }}</td>
-            <td>
-            {% if event.url %}
-                <a href="{{ event.url }}" target="_blank">{{ event }}</a>
-            {% else %}
-                {{ event }}
-            {% endif %}
-            </td>
-            <td>{{ event.country }} ({{ event.city }})</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for event in events %}
+                {% ifchanged event.start|date:"Y" %}
+                    <tr class="seperator">
+                        <td colspan="4">{{ event.start|date:"Y" }}</td>
+                    </tr>
+                {% endifchanged %}
+                <tr>
+                    <td>{{ event.start }}</td>
+                    <td>{{ event.start }}</td>
+                    <td>
+                        {% if event.url %}
+                            <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                        {% else %}
+                            {{ event }}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
+                             alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                        {{ event.country }} ({{ event.city }})
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <h1 id="dance-teachers" class="anchor">My Dance Teachers</h1>
@@ -411,103 +415,24 @@
             </thead>
             <tbody>
 
-            <tr>
-                <td>2013-07-18</td>
-                <td>2013-07-21</td>
-                <td><a
-                        href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=7013" target="_blank">Salsa
-                    Festival Portorose</a>&nbsp;- Sabor Latino
-                </td>
-                <td>Slovenia (Portorose)</td>
-            <tr>
-
-            <tr>
-                <td>2013-05-25</td>
-                <td>2013-05-25</td>
-                <td><a
-                        href="http://www.salsa-linz.at/Veranstaltungen_Details.aspx?ID=7040" target="_blank">Salsa
-                    en la Playa (Open Air)</a>&nbsp;- Vienna Sabor Show
-                </td>
-                <td>Austria (Vienna)</td>
-            <tr>
-
-            <tr>
-                <td>2013-04-06</td>
-                <td>2013-04-06</td>
-                <td><a
-                        href="http://www.salsa-linz.com/Veranstaltungen_Details.aspx?ID=7014" target="_blank">Linzer
-                    Salsa Ball</a>&nbsp;- Sabor Show
-                </td>
-                <td>Austria (Linz)</td>
-            <tr>
-
-            <tr>
-                <td>2011-05-28</td>
-                <td>2011-05-28</td>
-                <td><a
-                        href="http://www.youtube.com/watch?v=epNAVScC_Og" target="_blank">Salsa
-                    Show Mojitos</a>&nbsp;- Stadtball
-                </td>
-                <td>Austria (Laakrichen)</td>
-            <tr>
-
-            <tr>
-                <td>2011-05-21</td>
-                <td>2012-05-21</td>
-                <td><a
-                        href="http://salsa-linz.com/Veranstaltungen_Details.aspx?ID=6098" target="_blank">Linzer
-                    Salsa Ball</a>&nbsp;- Sabor Show
-                </td>
-                <td>Austria (Linz)</td>
-            <tr>
-
-            <tr>
-                <td>2011-05-13</td>
-                <td>2011-05-15</td>
-                <td><a
-                        href="http://www.salsafestival.at/index.php?page=22&amp;gallery=32" target="_blank">Salsa
-                    Festival K&auml;rnten</a>
-                </td>
-                <td>Austria (P&ouml;rtschach, Carinthia)</td>
-            <tr>
-
-            <tr>
-                <td>2011-02-18</td>
-                <td>2011-02-18</td>
-                <td>Birthday Show</td>
-                <td>Austria (Walding)</td>
-            <tr>
-
-            <tr>
-                <td>2010-12-11</td>
-                <td>2010-12-11</td>
-                <td><a
-                        href="https://www.facebook.com/events/159632507408467/" target="_blank">Hornball
-                    Linz Mojitos Show</a>
-                </td>
-                <td>Austria (Linz)</td>
-            <tr>
-
-            <tr>
-                <td>2010-11-27</td>
-                <td>2010-11-27</td>
-                <td><a
-                        href="https://www.facebook.com/events/152615481448218/?ref=nf" target="_blank">Hornball
-                    Linz Mojitos Show</a>
-                </td>
-                <td>Austria (Linz)</td>
-            <tr>
-
-            <tr>
-                <td>2010-11-13</td>
-                <td>2010-11-13</td>
-                <td><a
-                        href="http://www.kuiwa.at/index.php?option=com_content&amp;view=article&amp;id=59&amp;Itemid=61"
-                        target="_blank">Gran
-                    Fiesta Latina</a>&nbsp;- Salsa Show with Carolina Rojas
-                </td>
-                <td>Austria (Linz)</td>
-            <tr>
+            {% for event in show_events %}
+                <tr>
+                    <td>{{ event.start }}</td>
+                    <td>{{ event.end }}</td>
+                    <td>
+                        {% if event.url %}
+                            <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                        {% else %}
+                            {{ event }}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
+                             alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                        {{ event.country }} ({{ event.city }})
+                    </td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
