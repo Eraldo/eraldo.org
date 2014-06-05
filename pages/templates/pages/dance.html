@@ -155,7 +155,7 @@
     <tr>
         <th>start</th>
         <th>end</th>
-        <th>event</th>
+        <th>event name</th>
         <th>location</th>
     </tr>
     </thead>
@@ -169,9 +169,12 @@
         <tr>
             <td>{{ event.start }}</td>
             <td>{{ event.start }}</td>
-            <td><a
-                href="{{ event.url }}" target="_blank">{{ event }}
-            </a>
+            <td>
+            {% if event.url %}
+                <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+            {% else %}
+                {{ event }}
+            {% endif %}
             </td>
             <td>{{ event.country }} ({{ event.city }})</td>
         </tr>
