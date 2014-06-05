@@ -7,7 +7,7 @@ __author__ = "Eraldo Helal"
 
 from django.conf.urls import patterns, url
 from django.shortcuts import redirect
-from pages.views import HomeView, TestView, ChatView, ContactView, DanceView, PersonalDevelopmentView, WebDesignView, T42View, TechnologyView
+from pages.views import HomeView, TestView, ChatView, ContactView, PersonalDevelopmentView, WebDesignView, T42View, TechnologyView
 
 urlpatterns = patterns('',
     # ex: ../
@@ -28,10 +28,6 @@ urlpatterns = patterns('',
         name='T42'),
 
     # TOPICS
-    # ex: ../dance/
-    url(r'^dance/$',
-        DanceView.as_view(),
-        name='dance'),
     # ex: ../personal-development/
     url(r'^personal-development/$',
         PersonalDevelopmentView.as_view(),

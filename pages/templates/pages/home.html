@@ -30,11 +30,11 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <a href="{% url 'pages:dance' %}"><img src="{{ STATIC_URL }}pages/images/slideshow/dance.jpg"
+                    <a href="{% url 'dance:home' %}"><img src="{{ STATIC_URL }}pages/images/slideshow/dance.jpg"
                                                            alt="dance"></a>
 
                     <div class="carousel-caption">
-                        <a class="btn btn-lg" href="{% url 'pages:dance' %}">Dance Instructor</a>
+                        <a class="btn btn-lg" href="{% url 'dance:home' %}">Dance Instructor</a>
                     </div>
                 </div>
                 <div class="item">
@@ -92,7 +92,7 @@
             <p>
                 As part of this journey I..<br>
                 <a href="{% url 'pages:personal-development' %}">make lives more awesome</a><br>
-                <a href="{% url 'pages:dance' %}">dance with passion</a><br>
+                <a href="{% url 'dance:home' %}">dance with passion</a><br>
                 <a href="{% url 'pages:web-design' %}">design modern websites</a><br>
                 <a href="{% url 'pages:technology' %}">embrace new technology</a><br>
                 <a href="{% url 'pages:technology' %}">craft fun games</a><br>

@@ -35,19 +35,6 @@ class T42View(TemplateView):
 # topics
 
 
-class DanceView(TemplateView):
-    template_name = "pages/dance.html"
-
-    def get_context_data(self, **kwargs):
-        context = super(DanceView, self).get_context_data(**kwargs)
-        context['years'] = [date.year for date in Event.objects.dates('start', 'year')]
-        context['events'] = Event.objects.all()
-        # for year in context['years']:
-        #     events[year] = Event.objects.filter(start__year = year)
-        # context['events'] = events
-        return context
-
-
 class PersonalDevelopmentView(TemplateView):
     template_name = "pages/personal-development.html"
 

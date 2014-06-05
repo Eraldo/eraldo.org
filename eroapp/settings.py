@@ -132,11 +132,12 @@ INSTALLED_APPS = (
     # main apps
     'users',
     'pages',
+    'dance',
     'events',
 
     # helper apps
     'south', # data migration
-    'crispy_forms', # nice form layouting
+    'crispy_forms', # nice form layouts
 )
 
 # A sample logging configuration. The only tangible logging
