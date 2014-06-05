@@ -5,6 +5,6 @@ __author__ = 'eraldo'
 
 
 class EventsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'start', 'end', 'country', 'city', 'has_url')
+    list_display = ('name', 'start', 'end', 'type', 'country', 'city', 'has_url')
 
 admin.site.register(Event, EventsAdmin)
