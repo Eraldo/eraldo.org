@@ -145,300 +145,148 @@
 
     <div class="section section-grey">
 
-    <h1 id="dance-events" class="anchor">My Dance Events</h1>
+        <h1 id="dance-events" class="anchor">My Dance Events</h1>
 
-    <div class="color-banner"></div>
+        <div class="color-banner"></div>
 
-    <div class="well">
-        <table id="dance-events-table" class="table table-striped">
-            <thead>
-            <tr>
-                <th>start</th>
-                <th>end</th>
-                <th>event name</th>
-                <th>location</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for event in events %}
-                {% ifchanged event.start|date:"Y" %}
-                    <tr class="seperator">
-                        <td colspan="4">{{ event.start|date:"Y" }}</td>
+        <div class="well">
+            <table id="dance-events-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>start</th>
+                    <th>end</th>
+                    <th>event name</th>
+                    <th>location</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for event in events %}
+                    {% ifchanged event.start|date:"Y" %}
+                        <tr class="seperator">
+                            <td colspan="4">{{ event.start|date:"Y" }}</td>
+                        </tr>
+                    {% endifchanged %}
+                    <tr>
+                        <td>{{ event.start }}</td>
+                        <td>{{ event.start }}</td>
+                        <td>
+                            {% if event.url %}
+                                <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                            {% else %}
+                                {{ event }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
+                                 alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                            {{ event.country }} ({{ event.city }})
+                        </td>
                     </tr>
-                {% endifchanged %}
-                <tr>
-                    <td>{{ event.start }}</td>
-                    <td>{{ event.start }}</td>
-                    <td>
-                        {% if event.url %}
-                            <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h1 id="dance-teachers" class="anchor">My Dance Teachers</h1>
+
+        <div class="color-banner"></div>
+
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item active"><h4>My Personal Trainer</h4></li>
+                <li class="list-group-item"><a href="{{ personal_trainer.url }}"
+                                               target="_blank">{{ personal_trainer.name }}</a>
+                    {% if personal_trainer.country %}
+                        <img src="http://countrycode.org/styles/images/flags/{{ personal_trainer.country|cut:" " }}-flag.jpg"
+                             alt="flag of {{ personal_trainer.country }}" style="max-height: 10px"/>
+                    {% endif %}
+
+                </li>
+                <li class="list-group-item active"><h4>Instructors & Partners</h4></li>
+
+                {% for instructor in instructors %}
+                    <li class="list-group-item">
+                        {% if instructor.url %}
+                            <a href="{{ instructor.url }}" target="_blank">{{ instructor.name }}
+                                {% if instructor.alias %} ({{ instructor.alias }}) {% endif %}</a>
                         {% else %}
-                            {{ event }}
+                            {{ instructor.name }}{% if instructor.alias %} ({{ instructor.alias }}) {% endif %}
                         {% endif %}
-                    </td>
-                    <td>
-                        <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
-                             alt="flag of {{ events.country }}" style="max-height: 10px"/>
-                        {{ event.country }} ({{ event.city }})
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
+                        {% if instructor.country %}
+                            <img src="http://countrycode.org/styles/images/flags/{{ instructor.country|cut:" " }}-flag.jpg"
+                                 alt="flag of {{ instructor.country }}" style="max-height: 10px"/>
+                        {% endif %}
+                        {% if instructor.partner %}
+                            &amp;
+                            {% if instructor.partner.country %}
+                                <img src="http://countrycode.org/styles/images/flags/{{ instructor.partner.country|cut:" " }}-flag.jpg"
+                                     alt="flag of {{ instructor.partner.country }}" style="max-height: 10px"/>
+                            {% endif %}
+                            {% if instructor.partner.url %}
+                                <a href="{{ instructor.partner.url }}" target="_blank">{{ instructor.partner.name }}
+                                    {% if instructor.partner.alias %} ({{ instructor.partner.alias }}) {% endif %}</a>
+                            {% else %}
+                                {{ instructor.partner.name }}
+                                {% if instructor.partner.alias %} ({{ instructor.partner.alias }}) {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </li>
+                {% endfor %}
 
-    <h1 id="dance-teachers" class="anchor">My Dance Teachers</h1>
+                <li class="list-group-item active"><h4>Groups</h4></li>
 
-    <div class="color-banner"></div>
-
-    <div>
-    <ul class="list-group">
-    <li class="list-group-item active"><h4>My Personal Trainer</h4></li>
-    <li class="list-group-item"><a href="https://www.facebook.com/canalesnicolas" target="_blank">Nicolas
-        Poblate
-        Canales</a>
-    </li>
-    <li class="list-group-item active"><h4>Couples / Singles</h4></li>
-    <li class="list-group-item"><a href="https://www.facebook.com/canalesnicolas" target="_blank">Nicolas
-        Poblate
-        Canales</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/ursula.flores.ortega" target="_blank">Ursula Flores Ortega</a>
-    </li>
-
-    <li class="list-group-item"><a href="http://www.love2salsa.at/wir.html" target="_blank">Manu Waldbauer &amp;
-        Rene
-        Waldbauer</a></li>
-
-    <li class="list-group-item"><a href="http://www.salsa-linz.com/" target="_blank">Geraldo Hemelmayr</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/yuri.pozo" target="_blank">Yuri Pozo</a></li>
-
-    <li class="list-group-item"><a href="http://www.adrianyanita.com/index.php/biografia" target="_blank">Adri&aacute;n
-        Rodr&iacute;guez
-        Carbajal &amp; Anita Santos Rub&iacute;n</a></li>
-
-    <li class="list-group-item"><a href="http://www.juniorandemily.com/" target="_blank">Junior Alibi &amp;
-        Emily
-        Alibi</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/AlexAyelet" target="_blank">Alex Leyzer &amp;
-        Ayelet
-        Haliva</a></li>
-
-    <li class="list-group-item"><a href="http://www.palante.eu/enaboutus.php?&amp;id=3" target="_blank">Evgeni
-        Markov</a>&nbsp;&amp; <a class="c2"
-                                 href="http://www.palante.eu/enaboutus.php?&amp;id=2" target="_blank">Liliana
-        Gueorguieva Konstantinova</a></li>
-
-    <li class="list-group-item"><a href="http://www.mirodance.com/" target="_blank">Miroslav Ivanov &amp;
-        Denitsa Mitakova
-        Ivanova</a></li>
-
-    <li class="list-group-item"><a href="http://en.wikipedia.org/wiki/Eddie_Torres" target="_blank">Eddie Torres
-        (aka Mambo
-        King)</a>&nbsp;&amp; <a class="c2"
-                                href="https://www.facebook.com/shani.talmor" target="_blank">Shani
-        Talmor</a></li>
-
-    <li class="list-group-item"><a class="c2"
-                                   href="http://www.latinmotion.com.au/about-us/our-instructors/oliver-pineda"
-                                   target="_blank">Oliver
-        Pineda</a></li>
-
-    <li class="list-group-item"><a class="c2"
-                                   href="https://www.facebook.com/supermario.london"
-                                   target="_blank">Mario Hazarika</a> (Supermario Salsa) [Lon]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/manuel.mascarell" target="_blank">Manuel
-        Mascarell</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/atacajorgie" target="_blank">Jorge Burgos</a>&nbsp;(Ataca)
-        &amp;
-        <a href="https://www.facebook.com/LaAlemana813" target="_blank">Tanja Kensinger</a>&nbsp;(La Alemana)
-    </li>
-
-    <li class="list-group-item"><a href="http://www.salsa-dance-professional.com/juan-matos.html"
-                                   target="_blank">Juan
-        Matos</a>&nbsp;&amp; <a class="c2"
-                                href="https://www.facebook.com/amnerismartinez27" target="_blank">Amneris
-        Martinez</a>&nbsp;[Ita, Spa]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/terry.tauliaut" target="_blank">Terry Dan
-        Ambroise
-        Tauliaut</a>&nbsp;&amp; <a class="c2"
-                                   href="https://www.facebook.com/cecile.ovide" target="_blank">C&eacute;cile
-        Ovide</a>&nbsp;(Terry &amp; Cecile) [Fra]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/ivan.puertasgarcia" target="_blank">Iv&aacute;n
-        Puertas</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/lyudmyla.kalyuzhna" target="_blank">Lyudmyla Kalyuzhna</a>&nbsp;[Spa,
-        Ukr]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/falco.benalcazar" target="_blank">Falco
-        Benalcazar</a>&nbsp;[ECU]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/albir.rojasdos" target="_blank">Albir Rojas</a>&nbsp;[Pan]&nbsp;&amp;
-        <a href="https://www.facebook.com/albirysara" target="_blank">Sara Lopez Martines</a>&nbsp;[Spa]
-    </li>
-
-    <li class="list-group-item"><a href="http://big-spenders.fr/" target="_blank">Frantz Kichenassamy</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/mayssane.assaf" target="_blank">Mayssane Assaf</a>&nbsp;[Fra]
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/gabriel.ballany" target="_blank">Gabriel
-        Ball&aacute;ny</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/beata.kollarova" target="_blank">Beata Kollarova</a>&nbsp;[Svk]
-    </li>
-
-    <li class="list-group-item"><a href="http://www.salsaclub-salzburg.at/salsa_kontakt.php" target="_blank">Edith
-        Homoki</a>&nbsp;&amp;
-        <a href="https://www.facebook.com/sadmir.becirspahic" target="_blank">Sadmir Becirspahic</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/1SalseraLoca" target="_blank">Tanja
-        Oberhammer</a>&nbsp;&amp; <a class="c2"
-                                     href="https://www.facebook.com/ho.ki.796" target="_blank">Hoki</a>
-    </li>
-
-    <li class="list-group-item"><a href="http://www.kikeyfania.com/" target="_blank">Enrique Utrera Cuesta
-        (Kike) &amp;
-        Estefan&iacute;a Sabajanes Jim&eacute;nez (Fan&iacute;a)</a></li>
-
-    <li class="list-group-item"><a href="http://schoolofeverything.com/teacher/christianjean-francois"
-                                   target="_blank">Christian
-        Jean-Francois</a>&nbsp;&amp; <a class="c2"
-                                        href="http://polestars.net/teacher/shirene-myra-solak/" target="_blank">Shirene
-        Myra Solak</a>&nbsp;(Christian &amp; Shirene)
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/munaquita" target="_blank">Claudia Sabor</a>
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/alexandra.shtetinska" target="_blank">Alexandra
-        Shtetinska</a>&nbsp;&amp; <a class="c2"
-                                     href="https://www.facebook.com/bozhidar.gugushev" target="_blank">Bozhidar
-        Gugushev</a>&nbsp;(Teo)
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/salsa.georg" target="_blank">Georg
-        Kamenov-Kohl</a>&nbsp;&amp; <a class="c2"
-                                       href="https://www.zumba.com/en-US/instructor/ines-kamenov-kohl/272145/"
-                                       target="_blank">Ines
-        Kamenov-Kohl</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/SalsaHans" target="_blank">Johann Reitmaier
-        (Salsa Hans)</a>&nbsp;&amp;
-        Evelyn
-    </li>
-
-    <li class="list-group-item"><a href="http://facebook.com/gensilf" target="_blank">Gensil Esteban Fermin
-        Guillen (Gensil
-        Fermin)</a>&nbsp;&amp; <a class="c2"
-                                  href="https://www.facebook.com/heike.scherf" target="_blank">Heike
-        Scherf</a></li>
-
-    <li class="list-group-item"><a href="http://www.salsastudioromano.de/salsa/tanzlehrer/aanyo.html"
-                                   target="_blank">Aanyo
-        Kossi Kuzeawu</a>&nbsp;&amp; <a class="c2"
-                                        href="http://www.mamborico.de/team.php" target="_blank">Ewgenija</a>&nbsp;(
-        <a href="http://www.mamborico.de/" target="_blank">Mamborico</a>)
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/ruedaconjorge" target="_blank">Jorge
-        Morales</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/beigesalsa" target="_blank">Zsuzsanna B&ouml;jte
-        (Beige)</a>
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/djfuerza" target="_blank">Andr&egrave;s
-        Ramirez</a>
-    </li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/esteban.henriquezmorales" target="_blank">Esteban
-        Henriquez
-        Morales</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/anke.obermayer.3" target="_blank">Anke
-        Obermayer</a>
-    </li>
-
-    <li class="list-group-item"><a class="c2"
-                                   href="http://www.salsafestival.at/index.php/page/p3_de_workshopleiter.html"
-                                   target="_blank">Vincent
-        &amp; Viktoria</a></li>
-
-    <li class="list-group-item"><a href="http://www.cubandances.ch/profil.php" target="_blank">Francisco
-        Rodriguez Barbur
-        (Paco)</a></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/victor.ortega" target="_blank">Victor
-        Ortega</a></li>
-
-    <li class="list-group-item"><a href="http://www.afrolatinconnection.com/" target="_blank">Ricardo Sousa
-        &amp; Paula
-        Loureiro</a></li>
-
-    <li class="list-group-item active"><h4>Groups</h4></li>
-
-    <li class="list-group-item"><a href="https://www.facebook.com/LosMojitos" target="_blank">Los Mojitos</a>
-    </li>
-
-    <li class="list-group-item"><a href="http://www.swinguys.it/" target="_blank">Swing Guys</a></li>
-
-    <li class="list-group-item"><a href="http://www.fuegoypasion.ch/" target="_blank">Fuego y Pasion</a></li>
-
-    <li class="list-group-item"><a href="http://www.mamborico.de/" target="_blank">Mamborico</a></li>
-
-    <li class="list-group-item"><a href="http://www.candente.de/" target="_blank">Grupo Candente</a></li>
-
-    <li class="list-group-item"><a href="http://big-spenders.fr/" target="_blank">Big Spenders</a></li>
-    </ul>
-    </div>
-
-    <h1 id="dance-shows" class="anchor">My Dance Shows</h1>
-
-    <div class="color-banner"></div>
-
-    <div class="well">
-        <table id="dance-shows-table" class="table table-striped">
-            <thead>
-            <tr>
-                <th>start</th>
-                <th>end</th>
-                <th>event name</th>
-                <th>location</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            {% for event in show_events %}
-                <tr>
-                    <td>{{ event.start }}</td>
-                    <td>{{ event.end }}</td>
-                    <td>
-                        {% if event.url %}
-                            <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                {% for group in groups %}
+                    <li class="list-group-item">
+                        {% if group.url %}
+                            <a href="{{ group.url }}" target="_blank">{{ group.name }}</a>
                         {% else %}
-                            {{ event }}
+                            {{ group.name }}
                         {% endif %}
-                        {% if event.description %}
-                            - {{ event.description }}
-                        {% endif %}
-                    </td>
-                    <td>
-                        <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
-                             alt="flag of {{ events.country }}" style="max-height: 10px"/>
-                        {{ event.country }} ({{ event.city }})
-                    </td>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <h1 id="dance-shows" class="anchor">My Dance Shows</h1>
+
+        <div class="color-banner"></div>
+
+        <div class="well">
+            <table id="dance-shows-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>start</th>
+                    <th>end</th>
+                    <th>event name</th>
+                    <th>location</th>
                 </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+
+                {% for event in show_events %}
+                    <tr>
+                        <td>{{ event.start }}</td>
+                        <td>{{ event.end }}</td>
+                        <td>
+                            {% if event.url %}
+                                <a href="{{ event.url }}" target="_blank">{{ event }}</a>
+                            {% else %}
+                                {{ event }}
+                            {% endif %}
+                            {% if event.description %}
+                                - {{ event.description }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
+                                 alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                            {{ event.country }} ({{ event.city }})
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
     <div class="section-end section-end-grey"></div>
 

@@ -16,6 +16,11 @@ class Instructor(models.Model):
     description = models.TextField(blank=True)
 
     alias = models.CharField(max_length=50, blank=True)
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),
+    )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
 
     type = models.CharField(max_length=50, blank=True)
     order = models.IntegerField(default=0)
@@ -30,7 +35,7 @@ class Instructor(models.Model):
     modification_date = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["-order", "-name"]
+        ordering = ["-order", "name"]
 
     def __unicode__(self):
         return self.name
