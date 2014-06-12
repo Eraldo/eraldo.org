@@ -3,33 +3,13 @@
 This module contains the web pages based views.
 """
 from django.contrib import messages
-from events.models import Event
-from pages.forms import ContactForm
+from django.views.generic import TemplateView
 
 __author__ = "Eraldo Helal"
-
-from django.views.generic import TemplateView, FormView
 
 
 class HomeView(TemplateView):
     template_name = "pages/home.html"
-
-
-class ContactView(FormView):
-    template_name = "pages/contact.html"
-    form_class = ContactForm
-    success_url = '.'
-
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
-        messages.success(self.request, 'Your message has been sent.')
-        return super(ContactView, self).form_valid(form)
-
-
-class T42View(TemplateView):
-    template_name = "pages/T42.html"
 
 
 # topics

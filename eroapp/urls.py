@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
     # main urls
     url(r'^dance/', include('dance.urls', namespace="dance")),
+    url(r'^contact/', include('contact.urls', namespace="contact")),
     url(r'', include('pages.urls', namespace="pages")),
 
     # Uncomment the admin/doc line below to enable admin documentation:

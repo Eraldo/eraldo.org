@@ -131,6 +131,7 @@ INSTALLED_APPS = (
 
     # main apps
     'users',
+    'contact',
     'pages',
     'dance',
     'events',

@@ -176,7 +176,7 @@
                                                          data-container="body" data-content="Contact me to get access"
                                                          data-original-title="Selected people.."
                                                          title="Selected people..">blog</a></li>
-                                <li class="menu-link"><a href="{% url 'pages:contact' %}">contact</a></li>
+                                <li class="menu-link"><a href="{% url 'contact:home' %}">contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -210,8 +210,8 @@
                 (estimated).
                 <br>
                 © {% now "Y" %} Eraldo Helal | <a href="{% url 'pages:home' %}">www.eraldo.org</a> | <a
-                        href="{% url 'pages:contact' %}">impressum</a> | <a href="{% url 'pages:contact' %}">sitemap</a>
-                | <a href="{% url 'pages:contact' %}">Designed by Eraldo Webdesign</a>
+                        href="{% url 'contact:home' %}">impressum</a> | <a href="{% url 'contact:home' %}">sitemap</a>
+                | <a href="{% url 'contact:home' %}">Designed by Eraldo Webdesign</a>
             </p>
         </div>
     </div>
@@ -237,7 +237,7 @@
             </div>
         </div>
         <div class="footer-bar footer-bar-right col-xs-3 col-sm-4">
-            <a href="{% url 'pages:contact' %}" class="text-muted credit hidden-xs">✉ Contact Eraldo Helal</a>
+            <a href="{% url 'contact:home' %}" class="text-muted credit hidden-xs">✉ Contact Eraldo Helal</a>
             <a href="#" class="text-muted credit visible-xs">✉</a>
         </div>
     </div>
