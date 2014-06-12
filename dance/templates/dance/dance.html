@@ -168,7 +168,7 @@
                     {% endifchanged %}
                     <tr>
                         <td>{{ event.start }}</td>
-                        <td>{{ event.start }}</td>
+                        <td>{{ event.end }}</td>
                         <td>
                             {% if event.url %}
                                 <a href="{{ event.url }}" target="_blank">{{ event }}</a>
@@ -177,8 +177,7 @@
                             {% endif %}
                         </td>
                         <td>
-                            <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
-                                 alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                            {% include "dance/_flag.html" with country=event.country %}
                             {{ event.country }} ({{ event.city }})
                         </td>
                     </tr>
@@ -197,8 +196,7 @@
                 <li class="list-group-item"><a href="{{ personal_trainer.url }}"
                                                target="_blank">{{ personal_trainer.name }}</a>
                     {% if personal_trainer.country %}
-                        <img src="http://countrycode.org/styles/images/flags/{{ personal_trainer.country|cut:" " }}-flag.jpg"
-                             alt="flag of {{ personal_trainer.country }}" style="max-height: 10px"/>
+                        {% include "dance/_flag.html" with country=personal_trainer.country %}
                     {% endif %}
 
                 </li>
@@ -213,14 +211,12 @@
                             {{ instructor.name }}{% if instructor.alias %} ({{ instructor.alias }}) {% endif %}
                         {% endif %}
                         {% if instructor.country %}
-                            <img src="http://countrycode.org/styles/images/flags/{{ instructor.country|cut:" " }}-flag.jpg"
-                                 alt="flag of {{ instructor.country }}" style="max-height: 10px"/>
+                            {% include "dance/_flag.html" with country=instructor.country %}
                         {% endif %}
                         {% if instructor.partner %}
                             &amp;
                             {% if instructor.partner.country %}
-                                <img src="http://countrycode.org/styles/images/flags/{{ instructor.partner.country|cut:" " }}-flag.jpg"
-                                     alt="flag of {{ instructor.partner.country }}" style="max-height: 10px"/>
+                                {% include "dance/_flag.html" with country=instructor.partner.country %}
                             {% endif %}
                             {% if instructor.partner.url %}
                                 <a href="{{ instructor.partner.url }}" target="_blank">{{ instructor.partner.name }}
@@ -278,8 +274,7 @@
                             {% endif %}
                         </td>
                         <td>
-                            <img src="http://countrycode.org/styles/images/flags/{{ event.country }}-flag.jpg"
-                                 alt="flag of {{ events.country }}" style="max-height: 10px"/>
+                            {% include "dance/_flag.html" with country=event.country %}
                             {{ event.country }} ({{ event.city }})
                         </td>
                     </tr>
