@@ -7,6 +7,7 @@ __author__ = 'eraldo'
 
 admin.site.register(Group)
 
+
 class InstructorAdmin(admin.ModelAdmin):
     list_display = ('name', 'alias', 'gender', 'partner', 'group', 'country', 'has_url')
 
