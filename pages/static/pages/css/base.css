@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'eroapp';
-    src: url('PFBeauSansPro-Reg.ttf');
+    src: url('../fonts/PFBeauSansPro-Reg.ttf');
     src: local('☺'), url('../fonts/PFBeauSansPro-Reg.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'eroapp-thin';
-    src: url('PFBeauSansPro-Thin.ttf');
+    src: url('../fonts/PFBeauSansPro-Thin.ttf');
     src: local('☺'), url('../fonts/PFBeauSansPro-Thin.ttf') format('truetype');
 }
 
