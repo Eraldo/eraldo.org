@@ -12,7 +12,7 @@
 
 body {
     padding-top: 120px;
-    background: #222 url("http://zindustry.com/images/contact-bg.jpg");
+    background: #222 url("../images/bg.jpg");
     font-family: 'eroapp', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
@@ -47,7 +47,7 @@ div.container {
 }
 
 #main-menu, #footer {
-    background-image: url("http://zindustry.com/images/contact-bg.jpg");
+    background-image: url("../images/bg.jpg");
 }
 
 #main-menu img {
