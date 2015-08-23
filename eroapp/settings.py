@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     # helper apps
     'south', # data migration
     'crispy_forms', # nice form layouts
+    'django_countries',
 )
 
 # A sample logging configuration. The only tangible logging
