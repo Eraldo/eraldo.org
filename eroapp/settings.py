@@ -2,7 +2,7 @@
 import os
 import urlparse
 
-__author__ = "Eraldo Helal"
+__author__ = "Eraldo Energy"
 
 PROJECT_DIR = os.path.join(os.path.dirname(__file__), '..')
 
@@ -12,7 +12,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Eraldo Helal', 'eraldo@eraldo.org'),
+    ('Eraldo Energy', 'eraldo@eraldo.org'),
 )
 
 MANAGERS = ADMINS
